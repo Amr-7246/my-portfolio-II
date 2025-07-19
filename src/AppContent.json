@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Amr",
+    "typewriterStrings": [
+      "a fullStack software developer",
+      "working as a freelancer",
+      "a web frontEnd specialized"
+    ],
+    "openToWork": "Open to work"
+  },
+  "about": {
+    "OverveiwCard" : {
+      "fastPref" : "Ok . . Let’s just say it . .  I’m really passionate about what I’m working on . . Although I’m still a student at my college, but I had chosen my path on my own and that is the strongest proof of what I said . . So what I see that I can do is simple : I’m ready to take on any task, even if I haven’t learned it before  I’ll learn it for real . . ." ,
+      "button" : "Explor my projects",
+      "expirence" : 1,
+      "ProjectsCount" : 12
+    }
+  },
+  "Experince": {
+    "intro": "In the world of software, real ability is proven by building and shipping real projects, not just collecting certificates . . . So My journey is defined by hands-on experience, where every project has been a lesson in creativity, problem-solving, and growth.",
+    "subtitle": "A showcase of my practical journey",
+    "description": "From freelance gigs to collaborative team efforts, each experience here reflects my commitment to delivering value and learning through doing. Explore the projects below to see how I turn ideas into working solutions.",
+    "devMessage": "To see the source of code Just . . ",
+    "button": "Visit my Github",
+    "buttonLink": "https://github.com/Amr-7246"
+  }
+}
