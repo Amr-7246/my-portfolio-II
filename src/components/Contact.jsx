@@ -22,7 +22,7 @@ const Contact = () => {
   //   try {
   //     await navigator.clipboard.writeText(ItemNumber);
   //     setCopied(true);
-  //     setTimeout(() => setCopied(false), 2000); 
+  //     setTimeout(() => setCopied(false), 2000);
   //   } catch (err) {
   //     console.error("Failed to copy:", err);
   //   }
@@ -47,10 +47,10 @@ const Contact = () => {
       window.open(navLink,'_blank')
       setWhichContactM('')
     }
-} 
+}
   return (
     <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`} id="contact">
-      <motion.div variants={slideIn("left", "tween", 0.2, 1)} className="flex-[0.75] items-center flex flex-col p-8 rounded-2xl">
+      {/* <motion.div variants={slideIn("left", "tween", 0.2, 1)} className="flex-[0.75] items-center flex flex-col p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact Me</h3>
         <div className="flex  flex-wrap my-[30px]">
@@ -58,15 +58,15 @@ const Contact = () => {
             <div className="relative">
               <img onClick={() => HandelContact(item.navLink)} className="w-[50px] h-[50px] rounded-full mx-2 boxShadow animate-up-down cursor-pointer " src={item.icon} alt={item.name} />
               <div className={`${WhichContactM == item.navLink ? 'flex' : 'hidden'} duration-700 !bg-[var(--border)]/10 right-[-150%] backdrop-blur-md p-3 rounded-lg  font-black absolute `}>
-                { WhichContactM && 
-                  WhichContactM == 'Phone' ? 
+                { WhichContactM &&
+                  WhichContactM == 'Phone' ?
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="text-[15px] text-center !text-[var(--green)]">{item.Number}</p> 
+                    <p className="text-[15px] text-center !text-[var(--green)]">{item.Number}</p>
                   </div>
-                  : 
-                  WhichContactM == 'Mail'  ? 
+                  :
+                  WhichContactM == 'Mail'  ?
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="text-[15px] text-center  !text-[var(--orange)]">{item.Number}</p> 
+                    <p className="text-[15px] text-center  !text-[var(--orange)]">{item.Number}</p>
                   </div>
                   : ''
                 }
@@ -74,7 +74,7 @@ const Contact = () => {
             </div>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
 
       <motion.div variants={slideIn("right", "tween", 0.2, 1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
         <EarthCanvas />
