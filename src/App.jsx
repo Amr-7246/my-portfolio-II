@@ -8,7 +8,7 @@ const App = () => {
   return (
     <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true, }} >
       <div className="relative z-0 font-rubikDistressed bg-[var(--black)] text-[var(--text)] ">
-        <LayerMask/>
+        {/* <LayerMask/> */}
         <Navbar />
         <AppRoutes/>
       </div>

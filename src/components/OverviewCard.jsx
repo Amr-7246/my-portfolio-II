@@ -38,15 +38,15 @@ export const OverviewCard = () => {
   }, [inView, controls, expirence, ProjectsCount]);
 
   return (
-    <div className="flex flex-row gap-[60px] items-center justify-center py-8 px-4" style={{ color: 'var(--text)', background: 'var(--main)' }}>
+    <div className="flex flex-col lg:flex-row gap-[60px] items-center justify-center py-8 px-4" style={{ color: 'var(--text)', background: 'var(--main)' }}>
       <div>
-        <motion.img src={Amr} alt="Amr" className="rounded-md shadow-lg shadow-[var(--shadow)] mb-6" initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, ease: 'easeOut' }} style={{ width: 400, height: 400, objectFit: 'cover', border: '1px solid var(--orange)' }} ref={ref} />
+        <motion.img src={Amr} alt="Amr" className="rounded-full w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] lg:rounded-md shadow-lg shadow-[var(--shadow)] mb-6" initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, ease: 'easeOut' }} style={{ objectFit: 'cover', border: '1px solid var(--orange)' }} ref={ref} />
       </div>
       <div className='flex flex-col gap-10'>
-        <motion.div className=" border-b border-[var(--orange)] pb-10 text-center text-lg md:text-xl font-medium max-w-xl mb-6" initial={{ opacity: 0, y: 40 }} animate={controls} style={{ color: 'var(--text)' }} >
+        <motion.div className=" border-b border-dashed border-[var(--orange)] pb-10 text-center text-lg md:text-xl font-medium max-w-xl mb-6" initial={{ opacity: 0, y: 40 }} animate={controls} style={{ color: 'var(--text)' }} >
           {fastPref}
         </motion.div>
-        <div className='flex flex-row gap-8 items-center justify-center'>
+        <div className='flex flex-col lg:flex-row gap-x-8 gap-y-4 border-b border-dashed border-[var(--orange)] pb-10 items-center justify-center'>
           <motion.div className="flex flex-row gap-8 justify-center items-center mb-6" initial={{ opacity: 0, y: 40 }} animate={controls} >
             <div className="flex flex-col items-center">
               <span className="text-4xl font-bold orange-text-gradient" style={{ color: 'var(--orange)' }}>{expNum}+</span>
