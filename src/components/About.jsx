@@ -10,7 +10,8 @@ import { OverviewCard } from '.';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
-    <motion.div variants={fadeIn('right', 'spring', index * 0.5, 0.75)} className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card" >
+    {/* <motion.div variants={fadeIn('top', 'spring', index * 0.5, 0.75)} className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card" > */}
+    <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card" >
       <div
         options={{
           max: 45,
@@ -22,7 +23,7 @@ const ServiceCard = ({ index, title, icon }) => (
         <img src={icon} alt="web-development" className="w-16 h-16 object-contain" loading="lazy" />
         <h3 className="!text-[var(--text)] text-[20px] font-bold text-center">{title}</h3>
       </div>
-    </motion.div>
+    </div>
   </Tilt>
 );
 
@@ -40,7 +41,7 @@ const About = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()} className='mb-10 flex flex-col gap-[40px]' id='about'>
+      <motion.div className='mb-10 flex flex-col gap-[40px]' id='about'>
         <h2 className={`font-bold text-[50px] text-transparent bg-clip-text w-fit bg-gradient-to-r from-[var(--from)] via-[var(--via)]  to-[var(--to)]`}>Overview</h2>
         <div>
           <OverviewCard/>
@@ -64,7 +65,7 @@ const About = () => {
                     </div>
                     <motion.div
                       initial={false}
-                      animate={{ height: openTab === idx ? 'auto' : 0, opacity: openTab === idx ? 1 : 0, marginBottom: openTab === idx ? 24 : 0 }}
+                      animate={{ height: openTab === idx ? 'auto' : 0, opacity: openTab === idx ? 1 : 1, marginBottom: openTab === idx ? 24 : 0 }}
                       transition={{ duration: 0.5, ease: [0.6, 0.05, 0.28, 0.99] }}
                       style={{ overflow: 'hidden' }}
                     >
