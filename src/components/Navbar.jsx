@@ -48,15 +48,15 @@ const Navbar = () => {
                 <div onClick={list} className='flex cursor-pointer w-10 h-4 flex-col justify-around items-center'>
                   <span className={`${toggle ? 'transform rotate-45' : 'transform rotate-0'}
                                       ${toggle ? 'top-[3px]' : 'top-0'}
-                                      ${toggle ? 'bg-[var(--orange)]' : 'bg-[var(--text)] '} 
-                                      ${toggle ? 'w-[60%]' : 'w-[100%]'} 
+                                      ${toggle ? 'bg-[var(--orange)]' : 'bg-[var(--text)] '}
+                                      ${toggle ? 'w-[60%]' : 'w-[100%]'}
                                       group-hover:bg-gradient-to-r from-[var(--from)] via-[var(--via)] to-[var(--to)]
                                       duration-[500ms] relative w-[100%] h-[3px] rounded-[100%] `}></span>
-                  <span className={`${toggle ? 'transform rotate-[-45deg]' : 'transform rotate-0'} 
+                  <span className={`${toggle ? 'transform rotate-[-45deg]' : 'transform rotate-0'}
                                     ${toggle ? 'top-[-5px]' : 'top-0'}
-                                    ${toggle ? 'bg-[var(--orange)]' : 'bg-[var(--text)] '}  
-                                    ${toggle ? 'w-[60%]' : 'w-[100%]'} 
-                                    group-hover:bg-gradient-to-r from-[var(--from)] via-[var(--via)] to-[var(--to)] 
+                                    ${toggle ? 'bg-[var(--orange)]' : 'bg-[var(--text)] '}
+                                    ${toggle ? 'w-[60%]' : 'w-[100%]'}
+                                    group-hover:bg-gradient-to-r from-[var(--from)] via-[var(--via)] to-[var(--to)]
                                     duration-[500ms] relative w-[100%] h-[3px] rounded-[100%] `}></span>
                 </div>
               {/* Custome Open Side bar button */}
@@ -82,9 +82,9 @@ const Navbar = () => {
               {/* Suggestion for sidebar links */}
             </div>
         </div>
-        
+
         {/* Image Card Modal */}
-          <div  className={`fixed top-[45vh] inset-0 flex items-center justify-center z-50 transition-opacity duration-500 ${showImgCard ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`} 
+          <div  className={`fixed top-[45vh] inset-0 flex items-center justify-center z-50 transition-opacity duration-500 ${showImgCard ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
                 style={{ backdropFilter: showImgCard ? 'blur(4px)' : 'none' }} >
             <div className={`relative rounded-md p-4 flex flex-col items-center transition-all duration-500 ${showImgCard ? 'scale-100' : 'scale-95'}`} style={{ width: 260 }}>
               <button className='absolute top-2 right-2 !text-[var(--text)] hover:!text-[var(--hovered-text)] hover:rotate-[-20deg] hover:scale-[1.1] duration-700 transition text-xl' onClick={() => setShowImgCard(false)} >
@@ -94,7 +94,7 @@ const Navbar = () => {
             </div>
           </div>
         {/* Side bar */}
-          <div style={{ transition: 'all 1000ms cubic-bezier(0.6, -0.16, 0.44, 1.25)' }} className={` !bg-[var(--orange)]/50 ${toggle ? 'w-[90%] h-[250px] left-1/2 top-[120%] md:w-[300px] md:h-[350px] md:left-[78%] lg:left-[80%] transform -translate-x-1/2' : 'w-[0px] h-[0px] z-10 left-[90%] top-[70%]  md:left-[95%] md:top-[50%] rounded-[100%]'}  duration-[700ms] overflow-hidden mx-auto z-10 rounded-[20px] absolute `}>
+          <div style={{ transition: 'all 1000ms cubic-bezier(0.6, -0.16, 0.44, 1.25)' }} className={` !bg-[var(--dark-orange)] ${toggle ? 'w-[90%] h-[250px] left-1/2 top-[120%] md:w-[300px] md:h-[350px] md:left-[78%] lg:left-[80%] transform -translate-x-1/2' : 'w-[0px] h-[0px] z-10 left-[90%] top-[70%]  md:left-[95%] md:top-[50%] rounded-[100%]'}  duration-[700ms] overflow-hidden mx-auto z-10 rounded-[20px] absolute `}>
             <div className={`!bg-[var(--orange)]/50 h-[100%] w-full !backdrop-blur-3xl flex-col justify-center py-6`}>
               <ul className='flex !bg-[var(--orange)]/50 flex-col w-full md:py-[60px] h-full'>
                 <li className={` ${toggle ? 'opacity-1' : 'opacity-0'} duration-[600ms] delay-[300ms] flex flex-col h-full  py-[2px] items-center justify-center`}>
