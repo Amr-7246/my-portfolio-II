@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Amr",
+    "typewriterStrings": [
+      "a fullStack software developer",
+      "working as a freelancer",
+      "a web frontEnd specialized"
+    ],
+    "openToWork": "Open to work"
+  },
+  "about": {
+    "OverveiwCard" : {
+      "fastPref" : "مطور برمجيات لدى خبرة عملية كا فريلانسر فى بناء مواقع كاملة  (front/Back/devOps)  من التخطيط حتى النشر  . . متمكن من تقنيات الويب الحديثة مثل React، وNext.js، وNode.js، وأدوات الذكاء الاصطناعي المختلفة . . . ولاجل استخدامى لاكثرة من تقنية ولغات برمجة متعددة مثل python / PHP / Node js / TS  اصبح من السهل التعلم تقنيات جديدة بنائا على متطلبات العمل",
+      "button" : "استكشف مشاريعي",
+      "expirence" : 1,
+      "ProjectsCount" : 12
+    },
+    "services": [
+      { "title": "جافا سكريبت" },
+      { "title": "Typescript" },
+      { "title": "Next.JS" },
+      { "title": "React" },
+      { "title": "Python" },
+      { "title": "Node.JS" }
+    ],
+    "technologies": [
+      { "name": "HTML 5" },
+      { "name": "CSS 3" },
+      { "name": "JavaScript" },
+      { "name": "Typescript" },
+      { "name": "Next" },
+      { "name": "Rect JS" },
+      { "name": "Tailwind CSS" },
+      { "name": "Node JS" },
+      { "name": "Three JS" },
+      { "name": "git" }
+    ]
+  },
+  "Experince": {
+    "intro": "في عالم البرمجيات، القدرة الحقيقية تُثبت ببناء مشاريع حقيقية وليست فقط بجمع الشهادات . . . رحلتي كانت بالتجربة العملية، وكل مشروع كان درس في الإبداع وحل المشكلات والنمو.",
+    "subtitle": "عرض لمسيرتي العملية الواقعية",
+    "description": "من أعمال الفريلانس إلى العمل الجماعي، كل تجربة هنا تعكس التزامي بتقديم قيمة حقيقية والتعلم من خلال التطبيق. استكشف المشاريع أدناه لترى كيف أحول الأفكار إلى حلول واقعية.",
+    "devMessage": "لمشاهدة كود المصدر فقط . . .",
+    "button": "زر حسابي على Github",
+    "buttonLink": "https://github.com/Amr-7246",
+    "title": "خبرتى العملية",
+    "projects": [
+      {
+        "title": "E-Commerce",
+        "desc": "مشروع متكامل يوضح تكامل الواجهة الأمامية والخلفية مع التعامل مع API."
+      },
+      {
+        "title": "Dynamic Form Generator",
+        "desc": "تطبيق يسمح للمستخدم بإنشاء نماذج مخصصة متعددة مع روابطها."
+      },
+      {
+        "title": "Some Skills",
+        "desc": "مجموعة مشاريع صغيرة تبرز مهارات متنوعة."
+      },
+      {
+        "title": "Hotels App",
+        "desc": "تطبيق فنادق يوضح بعض منطق البحث والتصفية."
+      },
+      {
+        "title": "Name Generator",
+        "desc": "خوارزمية بسيطة لتوليد الأسماء مع بعض الخيارات ودمج ذكاء اصطناعي غير نشط."
+      },
+      {
+        "title": "Front-End Layouts Collection",
+        "desc": "بعض التصاميم الأمامية البسيطة لصفحات بدون وظائف، فقط CSS."
+      }
+    ]
+  },
+  "navLinks": [
+    { "id": "about", "title": "عنّي" },
+    { "id": "work", "title": "الأعمال" },
+    { "id": "contact", "title": "تواصل" }
+  ],
+  "contact": [
+    { "name": "gitHub", "navLink": "https://github.com/Amr-7246" },
+    { "name": "faceBook", "navLink": "https://www.facebook.com/profile.php?id=100072170876178&locale=ar_AR" },
+    { "name": "whatsApp", "navLink": "Phone", "Number": "+201124834339" },
+    { "name": "gmail", "navLink": "Mail", "Number": "aehab7246@gmail.com" }
+  ]
+}

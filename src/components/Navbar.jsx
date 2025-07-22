@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Logo } from '../assets';
 import { FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { changeLang } from '../utils/lang.js'
+import { useGlobalContext } from '../utils/GlobalContext.tsx';
 
 const navLinks = [
   { id: "/", title: "Home", },
@@ -15,6 +17,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [showImgCard, setShowImgCard] = useState(false);
   const [suggestIdx, setSuggestIdx] = useState(0);
+  const {setWhichLang} = useGlobalContext()
 
   // Suggestion cycling effect (fade up)
   React.useEffect(() => {
@@ -27,6 +30,11 @@ const Navbar = () => {
   const list = () => {
     setToggle(!toggle);
   };
+  //& For multi lang
+    const HandleLangChange = () => {
+      const Lang = changeLang()
+      setWhichLang(Lang)
+    }
 
   return (
     <>
@@ -94,8 +102,8 @@ const Navbar = () => {
             </div>
           </div>
         {/* Side bar */}
-          <div style={{ transition: 'all 1000ms cubic-bezier(0.6, -0.16, 0.44, 1.25)' }} className={` !bg-[var(--dark-orange)] ${toggle ? 'w-[90%] h-[250px] left-1/2 top-[120%] md:w-[300px] md:h-[350px] md:left-[78%] lg:left-[80%] transform -translate-x-1/2' : 'w-[0px] h-[0px] z-10 left-[90%] top-[70%]  md:left-[95%] md:top-[50%] rounded-[100%]'}  duration-[700ms] overflow-hidden mx-auto z-10 rounded-[20px] absolute `}>
-            <div className={`!bg-[var(--orange)]/50 h-[100%] w-full !backdrop-blur-3xl flex-col justify-center py-6`}>
+          <div style={{ transition: 'all 1000ms cubic-bezier(0.6, -0.16, 0.44, 1.25)' }} className={` !bg-[var(--dark-orange)] backdrop-blur-md ${toggle ? 'w-[90%] h-[250px] left-1/2 top-[120%] md:w-[300px] md:h-[350px] md:left-[78%] lg:left-[80%] transform -translate-x-1/2' : 'w-[0px] h-[0px] z-10 left-[90%] top-[70%]  md:left-[95%] md:top-[50%] rounded-[100%]'}  duration-[700ms] overflow-hidden mx-auto z-10 rounded-[20px] absolute `}>
+            <div className={` h-[100%] w-full flex-col justify-center py-6`}>
               <ul className='flex !bg-[var(--orange)]/50 flex-col w-full md:py-[60px] h-full'>
                 <li className={` ${toggle ? 'opacity-1' : 'opacity-0'} duration-[600ms] delay-[300ms] flex flex-col h-full  py-[2px] items-center justify-center`}>
                   {
@@ -106,6 +114,7 @@ const Navbar = () => {
                     ))
                   }
                 </li>
+                {/* <button className='btn' onClick={HandleLangChange} >change that lang</button> */}
               </ul>
             </div>
           </div>

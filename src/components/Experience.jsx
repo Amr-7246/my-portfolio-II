@@ -3,11 +3,15 @@ import "react-vertical-timeline-component/style.min.css";
 import { VerticalTimeline , VerticalTimelineElement } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { experiences } from "../Data/ProjectsData";
+import { experiences as arExperiences } from "../Data/ar/ProjectsData";
+import { experiences as enExperiences } from "../Data/en/ProjectsData";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import { FiExternalLink } from "react-icons/fi";
-import content from '../AppContent.json';
+import { useGlobalContext } from '../utils/GlobalContext.tsx';
+import arContent from '../Data/ar/AppContent.json';
+import enContent from '../Data/en/AppContent.json';
+import ChangeLang from "./ChangeLang.tsx";
 
 // ~ ########### Start Experience Card
   const ExperienceCard = ({ experience }) => {
@@ -47,7 +51,7 @@ import content from '../AppContent.json';
             { experience.IsCollection ?
               <div className=" justify-center flex flex-wrap mt-[10%] gap-2 ">
                 {experience.CollectionDeets.map((item , index) => (
-                  <h3 key={index} className = " md:text-[15px] text-[10px] !bg-[var(--purple)]/20 backdrop-blur-md p-1 rounded-lg items-center text-center justify-center flex-center md:w-[150px] w-[100px] font-bold cursor-pointer hover:!text-[var(--orange)] flex hover:underline"
+                  <h3 key={index} className = " md:text-[15px] text-[10px] !bg-[var(--purple)] backdrop-blur-md p-1 rounded-lg items-center text-center justify-center flex-center md:w-[150px] w-[100px] font-bold cursor-pointer hover:!text-[var(--orange)] flex hover:underline"
                       onClick={() => openWeb(item.link)}
                       >
                         {item.title}<span className=" m-2 text-center " ><FiExternalLink/></span>
@@ -81,7 +85,10 @@ import content from '../AppContent.json';
   };
 // ~ ########### End Experience Card
 const Experience = () => {
-  const { intro, subtitle, description,devMessage, button, buttonLink } = content.Experince;
+  const {WhichLang} = useGlobalContext();
+  const { intro, subtitle, title ,devMessage, button, buttonLink } =  WhichLang === 'en' ? enContent.Experince : arContent.Experince;
+  const experiences = WhichLang === "en" ? enExperiences : arExperiences
+  const dir = WhichLang === "en" ? "ltr" : "rtl";
   return (
     <>
       {/* ############# Animated Intro Section */}
@@ -95,24 +102,19 @@ const Experience = () => {
           {subtitle}
         </motion.h2>
         {/* Left: Text */}
-          <div className=" col-span-2 lg:col-span-1 row-span-1 flex-1 flex flex-col items-start justify-center px-4 md:px-12">
+          <div className=" relative col-span-2 lg:col-span-1 row-span-1 flex-1 flex flex-col items-start justify-center px-4 md:px-12">
+            <div className="mb-6">
+              <ChangeLang/>
+            </div>
             <motion.p
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
-              className="text-lg md:text-2xl font-medium text-left mb-4 !text-[var(--text)]"
+              className="text-lg md:text-2xl font-medium mb-4 !text-[var(--text)]"
             >
               {intro}
             </motion.p>
-            {/* <motion.p
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.1, ease: 'easeOut', delay: 0.4 }}
-              className="text-base md:text-lg text-left mb-8 !text-[var(--text)]/80"
-            >
-              {description}
-            </motion.p> */}
-            <div className="flex flex-col xl:flex-row w-full gap-4 flex-center border-t mt-[40px] py-4 border-[var(--orange)] ">
+            <div dir={dir} className="flex flex-col xl:flex-row w-full gap-4 flex-center border-t mt-[40px] py-4 border-[var(--orange)] ">
               <p>{devMessage}</p>
               <motion.a
                 href={buttonLink}
@@ -142,7 +144,7 @@ const Experience = () => {
       </div>
       {/* ############# text */}
       <div id="work">
-        <h2 className={`${styles.sectionHeadText} w-fit mx-auto !text-transparent !bg-clip-text !bg-gradient-to-r from-[var(--from)] via-[var(--via)]  to-[var(--to)] text-center`}>Work Experience</h2>
+        <h2 className={`${styles.sectionHeadText} w-fit mx-auto !text-transparent !bg-clip-text !bg-gradient-to-r from-[var(--from)] via-[var(--via)]  to-[var(--to)] text-center`}>{title}</h2>
       </div>
       {/* ############# */}
       {/* ############# Projects itself */}

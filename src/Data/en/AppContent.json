@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Amr",
+    "typewriterStrings": [
+      "a fullStack software developer",
+      "working as a freelancer",
+      "a web frontEnd specialized"
+    ],
+    "openToWork": "Open to work"
+  },
+
+  "about": {
+    "OverveiwCard" : {
+      "fastPref" : "Dynamic Software Developer with a real passion for coding and solving problems. Proficient in modern web tech like React, Next.js, Node.js, and AI-powered tools. And I’ve already built real-world projects and I’m always ready to learn more. I thrive in a collaborative environment and aim to build clean, user-friendly experiences that actually work." ,
+      "button" : "Explor my projects",
+      "expirence" : 1,
+      "ProjectsCount" : 12
+    },
+    "services": [
+      { "title": "Javascript" },
+      { "title": "Typescript" },
+      { "title": "Next.JS" },
+      { "title": "React" },
+      { "title": "Python" },
+      { "title": "Node.JS" }
+    ],
+    "technologies": [
+      { "name": "HTML 5" },
+      { "name": "CSS 3" },
+      { "name": "JavaScript" },
+      { "name": "Typescript" },
+      { "name": "Next" },
+      { "name": "Rect JS" },
+      { "name": "Tailwind CSS" },
+      { "name": "Node JS" },
+      { "name": "Three JS" },
+      { "name": "git" }
+    ]
+  },
+
+  "Experince": {
+    "intro": "In the world of software, real ability is proven by building and shipping real projects, not just collecting certificates . . . So My journey is defined by hands-on experience, where every project has been a lesson in creativity, problem-solving, and growth.",
+    "subtitle": "A showcase of my practical journey",
+    "description": "From freelance gigs to collaborative team efforts, each experience here reflects my commitment to delivering value and learning through doing. Explore the projects below to see how I turn ideas into working solutions.",
+    "devMessage": "To see the source of code Just . . ",
+    "button": "Visit my Github",
+    "buttonLink": "https://github.com/Amr-7246",
+    "projects": [
+      {
+        "title": "E-Commerce",
+        "desc": "Full-stack project showcasing front-end and back-end integration with API handling."
+      },
+      {
+        "title": "Dynamic Form Generator",
+        "desc": "An application that allows users to generate multiple fully customized forms with their links."
+      },
+      {
+        "title": "Some Skills",
+        "desc": "Snippets of mini projects that highlight different skills."
+      },
+      {
+        "title": "Hotels App",
+        "desc": "Hotel App to show some search and filter logics."
+      },
+      {
+        "title": "Name Generator",
+        "desc": "A simple name generation algorithm with basic options and inactive AI integration."
+      },
+      {
+        "title": "Front-End Layouts Collection",
+        "desc": "Some simple front-end layouts for some pages without any functionality. Just CSS."
+      }
+    ]
+  },
+  "navLinks": [
+    { "id": "about", "title": "About" },
+    { "id": "work", "title": "Work" },
+    { "id": "contact", "title": "Contact" }
+  ],
+  "contact": [
+    { "name": "gitHub", "navLink": "https://github.com/Amr-7246" },
+    { "name": "faceBook", "navLink": "https://www.facebook.com/profile.php?id=100072170876178&locale=ar_AR" },
+    { "name": "whatsApp", "navLink": "Phone", "Number": "+201124834339" },
+    { "name": "gmail", "navLink": "Mail", "Number": "aehab7246@gmail.com" }
+  ]
+}

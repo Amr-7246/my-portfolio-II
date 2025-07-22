@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tilt } from 'react-tilt';
-import { services } from '../Data/Techs';
 import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
-import { AboutDataForCompany, AboutDataForClient } from '../Data/AboutData';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { OverviewCard } from '.';
+import { useGlobalContext } from '../utils/GlobalContext';
+
+import { services as arData } from '../Data/ar/Techs';
+import { services as enData } from '../Data/en/Techs';
+import { AboutDataForCompany as arAboutDataForCompany , AboutDataForClient as arAboutDataForClient } from '../Data/ar/AboutData';
+import { AboutDataForCompany as enAboutDataForCompany , AboutDataForClient as enAboutDataForClient } from '../Data/en/AboutData';
+import Button from "./Balls_Button/Balls_Button"
+import ChangeLang from './ChangeLang';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -28,10 +34,18 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
+
+  const { WhichLang } = useGlobalContext()
   const [WhoAreThere, setWhoAreThere] = useState('client');
   const [openTab, setOpenTab] = useState(null);
+  const dir = WhichLang === 'en' ? 'ltr' : 'rtl';
 
-  // Select data source
+  //& For Ar/En lang
+    const services = WhichLang == 'en' ? enData : arData
+    const AboutDataForCompany = WhichLang == 'en' ? enAboutDataForCompany : arAboutDataForCompany
+    const AboutDataForClient = WhichLang == 'en' ? enAboutDataForClient : arAboutDataForClient
+
+  //~ Select data source
   const aboutData = WhoAreThere === 'company' ? AboutDataForCompany : WhoAreThere === 'client' ? AboutDataForClient : [];
 
   // Tab click handler
@@ -46,18 +60,28 @@ const About = () => {
         <div>
           <OverviewCard/>
         </div>
-        <div>
+        <div dir={dir}>
           {/* Select Buttons Controller */}
             <div className='flex flex-row justify-between gap-4'>
-              <button className={`btn w-full ${WhoAreThere === 'company' ? 'bg-transparent border-[var(--orange)] text-[var(--orange)]' : ''}`}  onClick={() => setWhoAreThere(WhoAreThere === 'company' ? '' : 'company')} >For company</button>
-              <button className={`btn w-full ${WhoAreThere === 'client' ? 'bg-transparent border-[var(--orange)] text-[var(--orange)]' : '' }`} onClick={() => setWhoAreThere(WhoAreThere === 'client' ? '' : 'client')} >For client</button>
+              <Button white
+                className={` w-full hover:text-amber-300 ${WhoAreThere === 'company' ? 'text-amber-300' : ''}`}
+                onClick={() => setWhoAreThere(WhoAreThere === 'company' ? '' : 'company')}>
+                  For company
+              </Button>
+              <Button white
+                className={` w-full hover:text-amber-300 ${WhoAreThere === 'client' ? ' text-amber-300' : ''}`}
+                onClick={() => setWhoAreThere(WhoAreThere === 'client' ? '' : 'client')}>
+                  For client
+              </Button>
+              {/* <button className={`btn w-full ${WhoAreThere === 'company' ? 'bg-transparent border-[var(--orange)] text-[var(--orange)]' : ''}`}  onClick={() => setWhoAreThere(WhoAreThere === 'company' ? '' : 'company')} >For company</button>
+              <button className={`btn w-full ${WhoAreThere === 'client' ? 'bg-transparent border-[var(--orange)] text-[var(--orange)]' : '' }`} onClick={() => setWhoAreThere(WhoAreThere === 'client' ? '' : 'client')} >For client</button> */}
             </div>
           {/* Tabs Section */}
             {WhoAreThere ? (
               <div className="w-full mx-auto mt-8 rounded-lg overflow-hidden backdrop-blur-lg">
                 {aboutData.map((item, idx) => (
                   <div key={idx}>
-                    <div className={`flex items-center justify-between px-6 py-4 cursor-pointer transition-all duration-300 select-none ${openTab === idx ? 'bg-gradient-to-r from-[var(--orange)]/20 to-[var(--border)]/20 !text-[var(--orange)] shadow-inner scale-[1.01]' : 'hover:bg-[var(--border)]/10 !text-[var(--text)]'} font-bold text-lg`} onClick={() => handleTabClick(idx)} >
+                    <div className={`flex items-center justify-between px-6 py-4 cursor-pointer transition-all duration-300 select-none ${openTab === idx ? 'bg-gradient-to-r from-[var(--orange)]/20 to-[var(--border)]/20 !text-[var(--orange)] shadow-inner ' : 'hover:bg-[var(--border)]/10 !text-[var(--text)]'} font-bold text-lg`} onClick={() => handleTabClick(idx)} >
                       <span className=' tracking-widest text-transparent bg-gradient-to-r from-[var(--from)] via-[var(--via)] to-[var(--to)] bg-clip-text '>{item.title}</span>
                       <span className="ml-2 text-xl transition-transform duration-300">
                         {openTab === idx ? <FaChevronUp /> : <FaChevronDown />}
@@ -65,13 +89,14 @@ const About = () => {
                     </div>
                     <motion.div
                       initial={false}
-                      animate={{ height: openTab === idx ? 'auto' : 0, opacity: openTab === idx ? 1 : 1, marginBottom: openTab === idx ? 24 : 0 }}
+                      animate={{ height: openTab === idx ? 'auto' : 0, opacity: openTab === idx ? 1 : 1 }}
                       transition={{ duration: 0.5, ease: [0.6, 0.05, 0.28, 0.99] }}
                       style={{ overflow: 'hidden' }}
                     >
                       {openTab === idx && (
-                        <div className="px-8 py-6 ">
-                          <p className=" font-rubikDistressed text-transparent bg-gradient-to-r from-[var(--text)] via-[var(--from)] to-[var(--text)] bg-clip-text mb-3">{item.UperContent}</p>
+                        <div className=" relative px-8 py-6 ">
+                          <ChangeLang/>
+                          <p className=" pt-5 font-rubikDistressed text-transparent bg-gradient-to-r from-[var(--text)] via-[var(--from)] to-[var(--text)] bg-clip-text mb-3">{item.UperContent}</p>
                           <p className=" font-joti text-transparent bg-gradient-to-r from-[var(--from)] via-[var(--orange)] to-[var(--from)] bg-clip-text font-bold mb-3">{item.HighlitedContent}</p>
                           <p className=" font-frijole text-transparent bg-[var(--text)]/60 bg-clip-text ">{item.DownContent}</p>
                         </div>
