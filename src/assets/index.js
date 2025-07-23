@@ -56,7 +56,7 @@ import bgPhoto6 from "./Customize/photo_1_2025-01-16_01-55-08.jpg"
 import bgPhoto7 from "./Customize/photo_2025-02-27_13-52-02.jpg"
 import bgPhoto8 from "./Customize/photo_2025-02-27_14-15-20.jpg"
 import bgPhoto9 from "./Customize/photo_2025-04-04_04-53-14.png"
-import bgPhoto10 from "./Customize/photo_2_2025-05-01_06-41-12.jpg"
+import bgPhoto10 from "./Customize/photo_11_2025-07-19_11-16-31.jpg"
 import Formsbg from "./Customize/photo_3_2025-05-29_13-16-03.jpg"
 // ********** navBar
 // ********** experiens

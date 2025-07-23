@@ -60,7 +60,7 @@ import ChangeLang from "./ChangeLang.tsx";
               </div>
               :
               <div className="justify-center flex flex-wrap mt-[20%] gap-2 ">
-                <h3 className = "!bg-[var(--border)]/20 border-[1px] !border-[var(--border)] py-2 px-5 rounded-lg items-center w-fit backdrop-blur-lg md:text-[19px] text-[15px] text-center justify-center flex-center  font-bold cursor-pointer hover:!text-[var(--orange)] flex hover:underline"
+                <h3 className = "!bg-black border-[1px] !border-[var(--orange)] py-2 px-5 rounded-lg items-center w-fit backdrop-blur-lg md:text-[19px] text-[15px] text-center justify-center flex-center  font-bold cursor-pointer hover:!text-[var(--orange)] flex hover:underline"
                     onClick={() => openWeb(experience.link)}
                     >
                       {experience.title}<span className=" m-2 text-center " ><FiExternalLink/></span>
