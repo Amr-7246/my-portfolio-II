@@ -12,7 +12,7 @@ import { ReactNode, useContext, useState, createContext } from "react";
     const GlobalContext = createContext<AuthContextType|undefined> (undefined)
     export const GlobalContextProvider = ({ children }: { children: ReactNode }) => {
 
-        const [WhichLang, setWhichLang] = useState<string | null >(null)
+        const [WhichLang, setWhichLang] = useState<string | null >('en')
 
         return (
             <GlobalContext.Provider value={{WhichLang, setWhichLang }} >

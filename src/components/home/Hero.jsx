@@ -1,14 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { hero_1 } from "../assets";
+import { styles } from "../../styles";
+import { hero_1 } from "../../assets";
 import Typewriter from "typewriter-effect";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import HeroLearMask from "./HeroLearMask";
 
 const Hero = () => {
   return (
     <section className="relative flex flex-row items-center justify-between overflow-hidden w-full h-screen mx-auto">
-      {/* Top Section */}
+      {/* left text Section */}
         <div className={` inset-0  w-fit ${styles.paddingX} flex flex-row items-start gap-5`}>
           <div className="flex flex-col justify-center items-center mt-[40px]">
             <div className="w-5 h-5 rounded-full bg-[var(--orange)]" />
@@ -45,7 +46,7 @@ const Hero = () => {
             {/* Animated Active Element */}
           </div>
         </div>
-      {/* Top Section */}
+      {/* left text Section */}
       {/* SVG Element */}
         <div className="  hidden lg:flex lg:mr-[2%] xl:mr-[15%] lg:w-[400px] lg:h-[400px] ">
           <img className="" src={hero_1} alt="hero" />
@@ -70,6 +71,7 @@ const Hero = () => {
           </a>
         </div>
       {/* Animated Button for about */}
+      <HeroLearMask/>
     </section>
   );
 };
