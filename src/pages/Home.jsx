@@ -12,7 +12,6 @@ const Home = () => {
       <PinedProjects/>
       <About />
       <InfinityScrolling/>
-
     </div>
   )
 }

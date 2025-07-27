@@ -37,7 +37,7 @@
   }
 
   .btn {
-    @apply cursor-pointer duration-[800ms] px-6 py-3  bg-[var(--orange)] text-[var(--text)]  rounded-lg border-[1px] border-transparent hover:text-[var(--orange)] hover:border-[var(--orange)]  hover:bg-transparent  font-['Dosis'] font-semibold shadow-lg hover:shadow-[var(--shadow)] transition-all;
+    @apply cursor-pointer duration-[800ms] px-6 py-3  bg-[var(--orange)] text-[var(--text)]  rounded-lg border-[1px] border-transparent font-['Dosis'] font-semibold shadow-lg hover:shadow-[var(--shadow)] hover:text-[var(--orange)] hover:border-[var(--orange)]  hover:bg-transparent   transition-all;
   }
 }
 /* haze & Sparks */
@@ -198,3 +198,22 @@
 .confirmation {
   color: #00ff00;
 }
+/*~ Projects styles */
+.shine {
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 5;
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+/*~ Projects styles */

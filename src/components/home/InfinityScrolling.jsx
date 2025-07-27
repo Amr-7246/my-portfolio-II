@@ -26,7 +26,7 @@ const InfinityScrolling = () => {
   }, [])
 
   return (
-    <div ref={wrapperRef} className='w-[80%] mx-auto relative overflow-hidden py-[100px]'>
+    <div ref={wrapperRef} className='w-[100%] mx-auto relative overflow-hidden py-[100px]'>
       <div ref={trackRef} className='flex flex-row gap-3 w-fit' >
         {[...Array(2)].flatMap(() =>
           Array.from({ length: 10 }).map((_, idx) => (
@@ -41,8 +41,8 @@ const InfinityScrolling = () => {
       </div>
 
       {/* Optional: Fades on sides */}
-      <div className='bg-gradient-to-r from-[var(--black)] via-transparent to-transparent h-full w-[300px] absolute left-0 top-0 z-10' />
-      <div className='bg-gradient-to-l from-[var(--black)] via-transparent to-transparent h-full w-[300px] absolute right-0 top-0 z-10' />
+      {/* <div className='bg-gradient-to-r from-[var(--black)] via-transparent to-transparent h-full w-[300px] absolute left-0 top-0 z-10' />
+      <div className='bg-gradient-to-l from-[var(--black)] via-transparent to-transparent h-full w-[300px] absolute right-0 top-0 z-10' /> */}
     </div>
   )
 }
