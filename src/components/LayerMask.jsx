@@ -223,7 +223,7 @@ const LayerMask = () => {
 
       {/* The Fire Embers with CSS */}
         <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(40)].map((_, i) => (
             <div
               key={i}
               className="absolute rounded-full opacity-80"
