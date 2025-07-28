@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Topper from '../../Topper';
 import SelectedProject, { SideBarShell } from './SelectedProject';
+import { openWeb } from '../../../hoc/navigation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -74,7 +75,6 @@ const PinedProjects = () => {
                 trigger: item,
                 start: start,
                 end: end,
-                markers: true,
                 scrub: 1,
                 animations: [projectBgTl, projectCardTl] ,
                 //& Animate project elements
@@ -221,7 +221,7 @@ const PinedProjects = () => {
 
       <div className='mb-[20px] py-5 flex-center gap-[100px] w-full'>
         <p>just a few, see more right here . . . </p>
-        <button className='btn'>All Projects</button>
+        <a href={'/experines'} className='btn'>All Projects</a>
       </div>
     </div>
   )

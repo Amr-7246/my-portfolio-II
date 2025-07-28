@@ -80,7 +80,7 @@ export const OverviewCard = () => {
                 <span className="text-base mt-1" style={{ color: 'var(--text)' }}>Projects</span>
               </div>
             </motion.div>
-            <motion.a href="/experines" className="mb-6 btn flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-lg"  initial={{ opacity: 0, y: 40 }} animate={controls} whileHover={{ scale: 0.99 }} whileTap={{ scale: 0.97 }} >
+            <motion.a href="/contact" className="mb-6 btn flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-lg"  initial={{ opacity: 0, y: 40 }} animate={controls} whileHover={{ scale: 0.99 }} whileTap={{ scale: 0.97 }} >
               {button} <FaArrowRight />
             </motion.a>
           </div>
