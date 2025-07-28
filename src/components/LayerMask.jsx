@@ -175,7 +175,7 @@ const LayerMask = () => {
       {/* Start the Multiple Smoke Layers */}
         <div className="absolute inset-0">
           {/* Primary Smoke Layer */}
-            <div className="absolute inset-0 opacity-5 animate-smoke-drift"
+            {/* <div className="absolute inset-0 opacity-5 animate-smoke-drift"
               style={{
                   background: `radial-gradient(ellipse at 30% 70%, var(--text, #6b7280) 0%, transparent 40%),
                               radial-gradient(ellipse at 70% 30%, var(--text, #6b7280) 0%, transparent 45%),
@@ -183,10 +183,10 @@ const LayerMask = () => {
                 filter: 'url(#smokeFilter) blur(50px)',
                 animation: 'smokeRise 18s ease-in-out infinite',
               }}
-            />
+            /> */}
 
           {/* Secondary Smoke Layer */}
-            <div className="absolute inset-0 opacity-10 animate-smoke-drift-2"
+            {/* <div className="absolute inset-0 opacity-10 animate-smoke-drift-2"
               style={{
                   background: `radial-gradient(ellipse at 20% 80%, var(--text, #6b7280) 0%, transparent 50%),
                               radial-gradient(ellipse at 80% 20%, var(--text, #6b7280) 0%, transparent 55%),
@@ -194,7 +194,7 @@ const LayerMask = () => {
                 filter: 'url(#smokeFilter) blur(70px)',
                 animation: 'smokeRise2 22s ease-in-out infinite reverse',
               }}
-            />
+            /> */}
 
           {/* Wispy Smoke Trails */}
             <div  className="absolute inset-0 opacity-5"

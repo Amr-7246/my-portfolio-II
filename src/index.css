@@ -1,9 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Dosis:wght@200..800&family=Frijole&family=Joti+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Metal+Mania&family=Nosifer&family=Orbitron:wght@400..900&family=Ribeye&family=Rowdies:wght@300;400;700&family=Rubik+Distressed&family=Rubik+Puddles&family=Shafarik&family=Tagesschrift&family=Yuji+Mai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Lateef:wght@200;300;400;500;600;700;800&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+  font-family: "Winky Rough", sans-serif;
+  font-weight: 600;
+  font-size: larger;
+  font-style: normal;
+}
+.btn {
+  font-family: 'Bitcount Grid Single', sans-serif;
+
+}
 
 :root {
     /* ~ --- Min --- */
@@ -37,7 +50,7 @@
   }
 
   .btn {
-    @apply cursor-pointer duration-[800ms] px-6 py-3  bg-[var(--orange)] text-[var(--text)]  rounded-lg border-[1px] border-transparent font-['Dosis'] font-semibold shadow-lg hover:shadow-[var(--shadow)] hover:text-[var(--orange)] hover:border-[var(--orange)]  hover:bg-transparent   transition-all;
+    @apply cursor-pointer duration-[800ms] px-6 py-3  bg-[var(--orange)] text-[var(--text)]  rounded-lg border-[1px] border-transparent font-semibold shadow-lg hover:shadow-[var(--shadow)] hover:text-[var(--orange)] hover:border-[var(--orange)]  hover:bg-transparent   transition-all;
   }
 }
 /* haze & Sparks */
