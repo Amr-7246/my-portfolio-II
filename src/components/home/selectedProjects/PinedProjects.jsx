@@ -204,7 +204,7 @@ const PinedProjects = () => {
       <div className='w-full h-screen flex flex-row relative' >
 
         {/* Projects Container */}
-          <div className='w-full lg:w-[70%] h-full relative overflow-hidden ml-4'>
+          <div className='w-full lg:w-[70%] h-full relative overflow-hidden '>
             <SelectedProject className={''} project={experiences[0]} idx={'0'}/>
             <SelectedProject className={''} project={experiences[1]} idx={'1'}/>
             <SelectedProject className={''} project={experiences[2]} idx={'2'}/>

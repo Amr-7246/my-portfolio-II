@@ -3,8 +3,20 @@ import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './Routes/AppRoutes';
 import {Navbar} from './components';
 import { GlobalContextProvider, useGlobalContext } from './utils/GlobalContext';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { initGA, trackPageView } from "./utils/analytics"
 
 const App = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    initGA();
+  }, []);
+
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location]);
   return (
     <GlobalContextProvider>
       <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true, }} >
