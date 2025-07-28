@@ -68,7 +68,7 @@ export const SideBarShell = ({ className, project, idx, activeProject }) => {
 
         {/* Project description */}
         <div className="sidebar-description">
-          <p className=" text-white">{project.description}</p>
+          <p className="">{project.description}</p>
         </div>
       </div>
     </div>
