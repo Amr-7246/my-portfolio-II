@@ -52,9 +52,9 @@ const Hero = () => {
           <img className="" src={hero_1} alt="hero" />
         </div>
       {/* SVG Element */}
-      {/* Animated Button for about */}
+      {/* Animated Button for pined projects */}
         <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-          <a href="#about">
+          <a href="#pin">
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
               <motion.div
                 animate={{
@@ -70,7 +70,7 @@ const Hero = () => {
             </div>
           </a>
         </div>
-      {/* Animated Button for about */}
+      {/* Animated Button for pined projects */}
       <HeroLearMask/>
     </section>
   );

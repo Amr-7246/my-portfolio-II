@@ -157,7 +157,7 @@ const LayerMask = () => {
 
               <feGaussianBlur stdDeviation="2" />
             </filter>
-            
+
             <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
               <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
               <feMerge>
@@ -165,13 +165,13 @@ const LayerMask = () => {
                 <feMergeNode in="SourceGraphic"/>
               </feMerge>
             </filter>
-            
+
           </defs>
         </svg>
 
       {/* Animated Smoke Background */}
       <div className="absolute inset-0 bg-black/10" />
-      
+
       {/* Start the Multiple Smoke Layers */}
         <div className="absolute inset-0">
           {/* Primary Smoke Layer */}
@@ -184,7 +184,7 @@ const LayerMask = () => {
                 animation: 'smokeRise 18s ease-in-out infinite',
               }}
             />
-          
+
           {/* Secondary Smoke Layer */}
             <div className="absolute inset-0 opacity-10 animate-smoke-drift-2"
               style={{
@@ -199,13 +199,13 @@ const LayerMask = () => {
           {/* Wispy Smoke Trails */}
             <div  className="absolute inset-0 opacity-5"
               style={{
-                  background: `linear-gradient(45deg, 
-                              transparent 20%, 
-                              var(--text, #6b7280) 40%, 
+                  background: `linear-gradient(45deg,
+                              transparent 20%,
+                              var(--text, #6b7280) 40%,
                               transparent 60%),
-                              linear-gradient(-45deg, 
-                              transparent 30%, 
-                              var(--text, #6b7280) 50%, 
+                              linear-gradient(-45deg,
+                              transparent 30%,
+                              var(--text, #6b7280) 50%,
                               transparent 70%)`,
                 filter: 'blur(40px)',
                 animation: 'smokeSwirl 30s linear infinite',
@@ -223,7 +223,7 @@ const LayerMask = () => {
 
       {/* The Fire Embers with CSS */}
         <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (
+          {[...Array(20)].map((_, i) => (
             <div
               key={i}
               className="absolute rounded-full opacity-80"
@@ -235,7 +235,7 @@ const LayerMask = () => {
                 background: `var(--orange, #ff6b35)`,
                 boxShadow: `0 0 ${Math.random() * 10 + 5}px var(--orange, #ff6b35)`,
                 filter: 'url(#glowFilter)',
-                animation: `fireEmber ${Math.random() * 4 + 3}s ease-out ${Math.random() * 2}s infinite`,
+                animation: `fireEmber ${Math.random() * 2 + 3}s ease-out ${Math.random() * 2}s infinite`,
               }}
             />
           ))}
@@ -250,14 +250,14 @@ const LayerMask = () => {
             75% { transform: translateY(-8px) rotate(1deg) scaleX(1.05); }
             100% { transform: translateY(20px) rotate(0deg) scaleX(1); }
           }
-          
+
           @keyframes smokeRise2 {
             0% { transform: translateY(15px) rotate(0deg) scaleY(1); }
             30% { transform: translateY(-10px) rotate(-2deg) scaleY(1.2); }
             60% { transform: translateY(-20px) rotate(1deg) scaleY(0.8); }
             100% { transform: translateY(15px) rotate(0deg) scaleY(1); }
           }
-          
+
           @keyframes smokeSwirl {
             0% { transform: rotate(0deg) scale(1); }
             25% { transform: rotate(90deg) scale(1.1); }
@@ -265,30 +265,30 @@ const LayerMask = () => {
             75% { transform: rotate(270deg) scale(1.05); }
             100% { transform: rotate(360deg) scale(1); }
           }
-          
+
           @keyframes fireEmber {
-            0% { 
-              opacity: 0.8; 
-              transform: translateY(0) scale(1); 
+            0% {
+              opacity: 0.8;
+              transform: translateY(0) scale(1);
             }
-            20% { 
-              opacity: 1; 
-              transform: translateY(-20px) scale(1.2); 
+            20% {
+              opacity: 1;
+              transform: translateY(-20px) scale(1.2);
             }
-            80% { 
-              opacity: 0.6; 
-              transform: translateY(-80px) scale(0.8); 
+            80% {
+              opacity: 0.6;
+              transform: translateY(-80px) scale(0.8);
             }
-            100% { 
-              opacity: 0; 
-              transform: translateY(-120px) scale(0.3); 
+            100% {
+              opacity: 0;
+              transform: translateY(-120px) scale(0.3);
             }
           }
-          
+
           .animate-smoke-drift {
             animation: smokeRise 18s ease-in-out infinite;
           }
-          
+
           .animate-smoke-drift-2 {
             animation: smokeRise2 22s ease-in-out infinite reverse;
           }
@@ -546,11 +546,11 @@ export default LayerMask;
 //             <feGaussianBlur in="smokeAlpha" stdDeviation="8" result="blurredSmoke" />
 //             <feComposite in="blurredSmoke" in2="turbulence" operator="multiply" />
 //           </filter>
-          
+
 //           {/* Enhanced Glow Filter */}
 //           <filter id="enhancedGlow" x="-100%" y="-100%" width="300%" height="300%">
 //             <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-//             <feColorMatrix in="coloredBlur" type="matrix" 
+//             <feColorMatrix in="coloredBlur" type="matrix"
 //               values="1 0.5 0 0 0
 //                       0.8 0.3 0 0 0
 //                       0.2 0.1 0 0 0
@@ -587,42 +587,42 @@ export default LayerMask;
 
 //       {/* Dark atmospheric base */}
 //       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
-      
+
 //       {/* Multiple Enhanced Smoke Layers */}
 //       <div className="absolute inset-0">
 //         {/* Primary Cinematic Smoke Layer */}
-//         <div 
+//         <div
 //           className="absolute inset-0 opacity-60"
 //           style={{
-//             background: `radial-gradient(ellipse at ${mousePos.x * 0.3 + 25}% ${mousePos.y * 0.5 + 60}%, 
-//                          rgba(120, 120, 120, 0.8) 0%, 
-//                          rgba(80, 80, 80, 0.4) 25%, 
+//             background: `radial-gradient(ellipse at ${mousePos.x * 0.3 + 25}% ${mousePos.y * 0.5 + 60}%,
+//                          rgba(120, 120, 120, 0.8) 0%,
+//                          rgba(80, 80, 80, 0.4) 25%,
 //                          transparent 50%),
-//                          radial-gradient(ellipse at ${mousePos.x * 0.4 + 70}% ${mousePos.y * 0.3 + 30}%, 
-//                          rgba(100, 100, 100, 0.6) 0%, 
-//                          rgba(60, 60, 60, 0.3) 30%, 
+//                          radial-gradient(ellipse at ${mousePos.x * 0.4 + 70}% ${mousePos.y * 0.3 + 30}%,
+//                          rgba(100, 100, 100, 0.6) 0%,
+//                          rgba(60, 60, 60, 0.3) 30%,
 //                          transparent 55%),
-//                          radial-gradient(ellipse at ${mousePos.x * 0.2 + 45}% ${mousePos.y * 0.6 + 45}%, 
-//                          rgba(140, 140, 140, 0.7) 0%, 
-//                          rgba(90, 90, 90, 0.4) 25%, 
+//                          radial-gradient(ellipse at ${mousePos.x * 0.2 + 45}% ${mousePos.y * 0.6 + 45}%,
+//                          rgba(140, 140, 140, 0.7) 0%,
+//                          rgba(90, 90, 90, 0.4) 25%,
 //                          transparent 45%)`,
 //             filter: 'url(#advancedSmokeFilter)',
 //             animation: 'cinematicSmokeRise 25s ease-in-out infinite',
 //             transform: `translate(${(mousePos.x - 50) * 0.1}px, ${(mousePos.y - 50) * 0.05}px)`,
 //           }}
 //         />
-        
+
 //         {/* Secondary Layered Smoke */}
-//         <div 
+//         <div
 //           className="absolute inset-0 opacity-10"
 //           style={{
-//             background: `radial-gradient(ellipse at ${mousePos.x * 0.6 + 15}% ${mousePos.y * 0.4 + 75}%, 
-//                          rgba(110, 110, 110, 0.9) 0%, 
-//                          rgba(70, 70, 70, 0.5) 35%, 
+//             background: `radial-gradient(ellipse at ${mousePos.x * 0.6 + 15}% ${mousePos.y * 0.4 + 75}%,
+//                          rgba(110, 110, 110, 0.9) 0%,
+//                          rgba(70, 70, 70, 0.5) 35%,
 //                          transparent 65%),
-//                          radial-gradient(ellipse at ${mousePos.x * 0.3 + 85}% ${mousePos.y * 0.2 + 25}%, 
-//                          rgba(95, 95, 95, 0.7) 0%, 
-//                          rgba(55, 55, 55, 0.4) 40%, 
+//                          radial-gradient(ellipse at ${mousePos.x * 0.3 + 85}% ${mousePos.y * 0.2 + 25}%,
+//                          rgba(95, 95, 95, 0.7) 0%,
+//                          rgba(55, 55, 55, 0.4) 40%,
 //                          transparent 70%)`,
 //             filter: 'url(#advancedSmokeFilter)',
 //             animation: 'cinematicSmokeRise2 30s ease-in-out infinite reverse',
@@ -631,16 +631,16 @@ export default LayerMask;
 //         />
 
 //         {/* Wispy Heat Distortion */}
-//         <div 
+//         <div
 //           className="absolute inset-0 opacity-25"
 //           style={{
-//             background: `linear-gradient(${mousePos.x * 2}deg, 
-//                          transparent 15%, 
-//                          rgba(130, 130, 130, 0.3) 35%, 
+//             background: `linear-gradient(${mousePos.x * 2}deg,
+//                          transparent 15%,
+//                          rgba(130, 130, 130, 0.3) 35%,
 //                          transparent 55%),
-//                          linear-gradient(${-mousePos.y * 1.5}deg, 
-//                          transparent 25%, 
-//                          rgba(105, 105, 105, 0.4) 45%, 
+//                          linear-gradient(${-mousePos.y * 1.5}deg,
+//                          transparent 25%,
+//                          rgba(105, 105, 105, 0.4) 45%,
 //                          transparent 75%)`,
 //             filter: 'url(#heatDistortion)',
 //             animation: 'smokeSwirl 40s linear infinite',
@@ -663,7 +663,7 @@ export default LayerMask;
 //           const baseY = 80 + (i * 2) % 40;
 //           const mouseInfluenceX = (mousePos.x - baseX) * 0.02;
 //           const mouseInfluenceY = (mousePos.y - baseY) * 0.015;
-          
+
 //           return (
 //             <div
 //               key={i}
@@ -673,10 +673,10 @@ export default LayerMask;
 //                 height: `${Math.random() * 8 + 3}px`,
 //                 left: `${baseX + mouseInfluenceX}%`,
 //                 top: `${baseY + mouseInfluenceY}%`,
-//                 background: `linear-gradient(180deg, 
-//                            #ffff00 0%, 
-//                            #ff8c00 30%, 
-//                            #ff4500 70%, 
+//                 background: `linear-gradient(180deg,
+//                            #ffff00 0%,
+//                            #ff8c00 30%,
+//                            #ff4500 70%,
 //                            #dc143c 100%)`,
 //                 boxShadow: `
 //                   0 0 ${Math.random() * 15 + 8}px #ff6b00,
@@ -713,47 +713,47 @@ export default LayerMask;
 //       {/* Enhanced CSS Animations */}
 //       <style jsx>{`
 //         @keyframes cinematicSmokeRise {
-//           0% { 
+//           0% {
 //             transform: translateY(30px) rotate(0deg) scaleX(1) scaleY(1);
 //             opacity: 0.6;
 //           }
-//           25% { 
+//           25% {
 //             transform: translateY(-15px) rotate(3deg) scaleX(1.2) scaleY(0.9);
 //             opacity: 0.8;
 //           }
-//           50% { 
+//           50% {
 //             transform: translateY(-40px) rotate(-2deg) scaleX(0.8) scaleY(1.3);
 //             opacity: 0.4;
 //           }
-//           75% { 
+//           75% {
 //             transform: translateY(-20px) rotate(2deg) scaleX(1.1) scaleY(0.95);
 //             opacity: 0.7;
 //           }
-//           100% { 
+//           100% {
 //             transform: translateY(30px) rotate(0deg) scaleX(1) scaleY(1);
 //             opacity: 0.6;
 //           }
 //         }
-        
+
 //         @keyframes cinematicSmokeRise2 {
-//           0% { 
+//           0% {
 //             transform: translateY(25px) rotate(0deg) scaleY(1) scaleX(1);
 //             opacity: 0.4;
 //           }
-//           30% { 
+//           30% {
 //             transform: translateY(-25px) rotate(-3deg) scaleY(1.4) scaleX(0.7);
 //             opacity: 0.6;
 //           }
-//           60% { 
+//           60% {
 //             transform: translateY(-50px) rotate(2deg) scaleY(0.6) scaleX(1.5);
 //             opacity: 0.3;
 //           }
-//           100% { 
+//           100% {
 //             transform: translateY(25px) rotate(0deg) scaleY(1) scaleX(1);
 //             opacity: 0.4;
 //           }
 //         }
-        
+
 //         @keyframes smokeSwirl {
 //           0% { transform: rotate(0deg) scale(1) skewX(0deg); }
 //           25% { transform: rotate(90deg) scale(1.1) skewX(5deg); }
@@ -761,52 +761,52 @@ export default LayerMask;
 //           75% { transform: rotate(270deg) scale(1.05) skewX(2deg); }
 //           100% { transform: rotate(360deg) scale(1) skewX(0deg); }
 //         }
-        
+
 //         @keyframes cinematicFireEmber {
-//           0% { 
+//           0% {
 //             opacity: 0;
-//             transform: translateY(0) translateX(0) scale(0.5) rotate(0deg); 
+//             transform: translateY(0) translateX(0) scale(0.5) rotate(0deg);
 //           }
-//           10% { 
+//           10% {
 //             opacity: 1;
-//             transform: translateY(-10px) translateX(${Math.random() * 20 - 10}px) scale(1) rotate(${Math.random() * 45}deg); 
+//             transform: translateY(-10px) translateX(${Math.random() * 20 - 10}px) scale(1) rotate(${Math.random() * 45}deg);
 //           }
-//           30% { 
+//           30% {
 //             opacity: 1;
-//             transform: translateY(-40px) translateX(${Math.random() * 30 - 15}px) scale(1.3) rotate(${Math.random() * 90}deg); 
+//             transform: translateY(-40px) translateX(${Math.random() * 30 - 15}px) scale(1.3) rotate(${Math.random() * 90}deg);
 //           }
-//           70% { 
+//           70% {
 //             opacity: 0.7;
-//             transform: translateY(-120px) translateX(${Math.random() * 50 - 25}px) scale(0.8) rotate(${Math.random() * 180}deg); 
+//             transform: translateY(-120px) translateX(${Math.random() * 50 - 25}px) scale(0.8) rotate(${Math.random() * 180}deg);
 //           }
-//           90% { 
+//           90% {
 //             opacity: 0.3;
-//             transform: translateY(-180px) translateX(${Math.random() * 40 - 20}px) scale(0.4) rotate(${Math.random() * 270}deg); 
+//             transform: translateY(-180px) translateX(${Math.random() * 40 - 20}px) scale(0.4) rotate(${Math.random() * 270}deg);
 //           }
-//           100% { 
+//           100% {
 //             opacity: 0;
-//             transform: translateY(-220px) translateX(${Math.random() * 60 - 30}px) scale(0.1) rotate(360deg); 
+//             transform: translateY(-220px) translateX(${Math.random() * 60 - 30}px) scale(0.1) rotate(360deg);
 //           }
 //         }
 
 //         @keyframes floatingHeat {
-//           0% { 
+//           0% {
 //             transform: translateY(0) translateX(0) scale(1);
 //             opacity: 0.2;
 //           }
-//           25% { 
+//           25% {
 //             transform: translateY(-30px) translateX(10px) scale(1.2);
 //             opacity: 0.6;
 //           }
-//           50% { 
+//           50% {
 //             transform: translateY(-60px) translateX(-5px) scale(0.8);
 //             opacity: 0.4;
 //           }
-//           75% { 
+//           75% {
 //             transform: translateY(-90px) translateX(15px) scale(1.1);
 //             opacity: 0.3;
 //           }
-//           100% { 
+//           100% {
 //             transform: translateY(-120px) translateX(-10px) scale(0.5);
 //             opacity: 0;
 //           }
@@ -978,7 +978,7 @@ export default LayerMask;
 //             </feComponentTransfer>
 //             <feGaussianBlur stdDeviation="1" />
 //           </filter>
-          
+
 //           <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
 //             <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
 //             <feMerge>
@@ -991,7 +991,7 @@ export default LayerMask;
 
 //       {/* Animated Gradient Background */}
 //       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 animate-pulse-slow" />
-      
+
 //       {/* Start Multiple Haze Layers */}
 //         <div className="absolute inset-0">
 //           {/* Primary Haze Layer */}
@@ -1004,7 +1004,7 @@ export default LayerMask;
 //                 animation: 'float 15s ease-in-out infinite alternate',
 //               }}
 //             /> */}
-          
+
 //           {/* Secondary Haze Layer */}
 //             {/* <div  className="absolute inset-0 opacity-20 animate-drift-reverse"
 //               style={{
@@ -1019,11 +1019,11 @@ export default LayerMask;
 //           {/* Tertiary Moving Haze */}
 //             {/* <div className="absolute inset-0 opacity-15"
 //               style={{
-//                   background:`conic-gradient(from 0deg at 50% 50%, 
-//                               rgba(147, 112, 219, 0.1) 0deg, 
-//                               rgba(255, 20, 147, 0.1) 90deg, 
-//                               rgba(0, 191, 255, 0.1) 180deg, 
-//                               rgba(50, 205, 50, 0.1) 270deg, 
+//                   background:`conic-gradient(from 0deg at 50% 50%,
+//                               rgba(147, 112, 219, 0.1) 0deg,
+//                               rgba(255, 20, 147, 0.1) 90deg,
+//                               rgba(0, 191, 255, 0.1) 180deg,
+//                               rgba(50, 205, 50, 0.1) 270deg,
 //                               rgba(147, 112, 219, 0.1) 360deg)`,
 //                 filter: 'blur(80px)',
 //                 animation: 'rotate 30s linear infinite',
@@ -1067,32 +1067,32 @@ export default LayerMask;
 //           50% { transform: translate(15px, -5px) rotate(-1deg) scale(0.95); }
 //           75% { transform: translate(-5px, 10px) rotate(0.5deg) scale(1.02); }
 //         }
-        
+
 //         @keyframes float-reverse {
 //           0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
 //           25% { transform: translate(10px, 10px) rotate(-1deg) scale(0.98); }
 //           50% { transform: translate(-15px, 5px) rotate(1deg) scale(1.03); }
 //           75% { transform: translate(5px, -10px) rotate(-0.5deg) scale(0.99); }
 //         }
-        
+
 //         @keyframes rotate {
 //           from { transform: rotate(0deg); }
 //           to { transform: rotate(360deg); }
 //         }
-        
+
 //         @keyframes sparkle {
 //           0%, 100% { opacity: 0.6; transform: scale(1); }
 //           50% { opacity: 1; transform: scale(1.5); }
 //         }
-        
+
 //         .animate-drift-slow {
 //           animation: float 15s ease-in-out infinite alternate;
 //         }
-        
+
 //         .animate-drift-reverse {
 //           animation: float-reverse 20s ease-in-out infinite alternate;
 //         }
-        
+
 //         .animate-pulse-slow {
 //           animation: pulse 4s ease-in-out infinite;
 //         }

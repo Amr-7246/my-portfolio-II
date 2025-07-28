@@ -198,7 +198,7 @@ const PinedProjects = () => {
       }, []);
   //&################################ End Side bar animation
   return (
-    <div ref={containerRef} className='w-full flex flex-col gap-5 '>
+    <div id='pin' ref={containerRef} className='w-full flex flex-col gap-5 '>
       <Topper text= { {left : 'My Work' , right : 'Selected Projects'} } className={'!w-[90%] !mx-auto'} />
 
       <div className='w-full h-screen flex flex-row relative' >
