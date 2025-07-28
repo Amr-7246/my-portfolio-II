@@ -57,6 +57,8 @@ import bgPhoto7 from "./Customize/photo_2025-02-27_13-52-02.jpg"
 import bgPhoto8 from "./Customize/photo_2025-02-27_14-15-20.jpg"
 import bgPhoto9 from "./Customize/photo_2025-04-04_04-53-14.png"
 import bgPhoto10 from "./Customize/photo_11_2025-07-19_11-16-31.jpg"
+import myGPT from "./Customize/myGpt.png"
+import bots from "./Customize/Bot_1.png"
 import Formsbg from "./Customize/photo_3_2025-05-29_13-16-03.jpg"
 // ********** navBar
 // ********** experiens
@@ -79,7 +81,7 @@ import gmail from "./Customize/photo_10_2025-01-11_23-36-58.jpg"
 
 export {
   Logo, Amr,hero_1, bgNav, bgNav2, bgNav3, navList, navList2,
-  bgPhoto, bgPhoto2, bgPhoto3, bgPhoto4, bgPhoto5, bgPhoto6, bgPhoto7, bgPhoto8, bgPhoto9, bgPhoto10,Formsbg ,
+  bgPhoto, bgPhoto2, bgPhoto3, bgPhoto4, bgPhoto5, bgPhoto6, bgPhoto7, bgPhoto8, bgPhoto9, bgPhoto10,Formsbg ,myGPT, bots ,
   icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9,
   vite,
   gitHub,

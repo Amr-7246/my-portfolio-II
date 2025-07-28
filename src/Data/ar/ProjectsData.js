@@ -9,7 +9,7 @@ import {
     bgPhoto, bgPhoto2,
     bgPhoto3, bgPhoto4, bgPhoto5, bgPhoto6,
     bgPhoto7, bgPhoto8, bgPhoto9, bgPhoto10,
-    icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9 , Formsbg
+    icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9 , Formsbg , myGPT , bots
 } from "../../assets"
 
 export const experiences = {
@@ -26,7 +26,7 @@ export const experiences = {
           "It`s Full-stack project showcasing front-end and back-end integration with API handling. "
         ],
       },
-    
+
       {
         bgPhoto: suburbiaBg_1,
         // video: suburbiaBg_1,
@@ -92,7 +92,7 @@ export const experiences = {
           ""
         ],
       },
-    
+
       {
         bgPhoto: Formsbg,
         title: "Dynamic Form Generator",
@@ -245,7 +245,7 @@ export const experiences = {
       },
   ],
   frontendProjects : [
-    
+
       {
         bgPhoto: suburbiaBg_1,
         // video: suburbiaBg_1,
@@ -311,7 +311,7 @@ export const experiences = {
           ""
         ],
       },
-    
+
       {
         bgPhoto: bgPhoto9,
         title: "Some Skills",
@@ -397,7 +397,7 @@ export const experiences = {
           "It`s Full-stack project showcasing front-end and back-end integration with API handling. "
         ],
       },
-    
+
       {
         bgPhoto: Formsbg,
         title: "Dynamic Form Generator",
@@ -412,77 +412,33 @@ export const experiences = {
       },
   ],
 
-  aiProjects : [
+aiProjects : [
       {
-        IsCollection: true ,
-        bgPhoto: bgPhoto2,
-        CollectionDeets : [
-          {
-            title: "IPhone clon",
-            link: "https://amr-7246.github.io/ApplePage/",
-          },
-          {
-            title: "BrainWave",
-            link: "https://amr-7246.github.io/Brainwave/",
-          },
-          {
-            title: "FitnessApp",
-            link: "https://amr-7246.github.io/FitnessApp/",
-          },
-          {
-            title: "BusinessApp",
-            link: "https://amr-7246.github.io/BusinessApp/",
-          },
-          {
-            title: "FoodApp",
-            link: "https://amr-7246.github.io/FoodApp/",
-          }
-        ] ,
-        link: "https://amr-7246.github.io/ApplePage/",
+        bgPhoto: myGPT,
+        title: "myGPT",
+        link: "",
         company_name: "",
-        icon: icon2,
-        iconBg: "#161329",
-        date: "June 2023 - July 2023",
+        icon: icon9,
+        iconBg: "black",
+        date: "",
         points: [
-          "Here is some simple front-end layouts for some pages without any functionality..Just CSS ",
+          "myGPT . . my personal chatGPT local clone using qwen3:8b AI model from ollama and langchain/graph with fastAPI for the AI agent logic"
         ],
       },
-  ],
-  botsProjects : [
-      {
-        IsCollection: true ,
-        bgPhoto: bgPhoto2,
-        CollectionDeets : [
-          {
-            title: "IPhone clon",
-            link: "https://amr-7246.github.io/ApplePage/",
-          },
-          {
-            title: "BrainWave",
-            link: "https://amr-7246.github.io/Brainwave/",
-          },
-          {
-            title: "FitnessApp",
-            link: "https://amr-7246.github.io/FitnessApp/",
-          },
-          {
-            title: "BusinessApp",
-            link: "https://amr-7246.github.io/BusinessApp/",
-          },
-          {
-            title: "FoodApp",
-            link: "https://amr-7246.github.io/FoodApp/",
-          }
-        ] ,
-        link: "https://amr-7246.github.io/ApplePage/",
-        company_name: "",
-        icon: icon2,
-        iconBg: "#161329",
-        date: "June 2023 - July 2023",
-        points: [
-          "Here is some simple front-end layouts for some pages without any functionality..Just CSS ",
-        ],
-      },
+    ],
+    botsProjects : [
+    {
+      bgPhoto: bots,
+      title: "البوت بوتك",
+      link: "https://github.com/Amr-7246/el_bot_botak",
+      company_name: "",
+      icon: icon9,
+      iconBg: "black",
+      date: "",
+      points: [
+        "Telegram Bot which serve unives students via collect all courses into one place"
+      ],
+    },
   ],
 }
 
