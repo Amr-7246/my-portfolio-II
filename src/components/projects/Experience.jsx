@@ -15,6 +15,7 @@ import ChangeLang from "../ChangeLang.tsx";
 import ProjectsCategories from "./ProjectsCategories.jsx";
 import CanvasLoader from "../Loader.jsx";
 import SaturnLoader from "../SaturnLoader.jsx";
+import Topper from '../Topper';
 
 // ~ ########### Start Experience Card
   const ExperienceCard = ({ experience }) => {
@@ -122,7 +123,8 @@ const Experience = () => {
     <>
       <ProjectsCategories WhichCate={WhichCate} setWhichCate={setWhichCate} />
       { IsLoading ? <SaturnLoader/> : (
-      <div id='projects' className="mt-20 max-w-[500px] lg:max-w-[2000px] mx-auto flex flex-col ">
+      <div id='projects' className="mt-20 max-w-[500px] lg:max-w-[2000px] mx-auto flex flex-col gap-10">
+        <Topper text= { {left : 'My Work' , right : 'Develop Your Dream App Now'} } className={''} />
         <VerticalTimeline>
           {selectedCate.map((experience, index) => (
             <ExperienceCard  key={`experience-${index}`} experience={experience} />

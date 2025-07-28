@@ -446,7 +446,7 @@ export const experiences = {
         ],
       },
   ],
-  aiProjects : [
+  botsProjects : [
       {
         IsCollection: true ,
         bgPhoto: bgPhoto2,

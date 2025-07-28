@@ -13,6 +13,7 @@ import { AboutDataForCompany as arAboutDataForCompany , AboutDataForClient as ar
 import { AboutDataForCompany as enAboutDataForCompany , AboutDataForClient as enAboutDataForClient } from '../../Data/en/AboutData';
 import Button from "../Balls_Button/Balls_Button"
 import ChangeLang from '../ChangeLang';
+import Topper from '../Topper';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -56,16 +57,18 @@ const About = () => {
   return (
     <>
       <motion.div className='mb-10 flex flex-col gap-[40px]' id='about'>
-        <h2 className={`font-bold text-[50px] text-transparent bg-clip-text w-fit bg-gradient-to-r from-[var(--from)] via-[var(--via)]  to-[var(--to)]`}>Overview</h2>
+        {/* <h2 className={`font-bold text-[50px] text-transparent bg-clip-text w-fit bg-gradient-to-r from-[var(--from)] via-[var(--via)]  to-[var(--to)]`}>Overview</h2> */}
         <div>
           <OverviewCard/>
         </div>
-
       </motion.div>
-      <div className="mt-20 flex flex-wrap justify-center gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+      <div>
+        <Topper text= { {left : 'Tech Stack' , right : 'My recent technologies'} } className={''} />
+        <div className="mt-20 flex flex-wrap justify-center gap-10">
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
+        </div>
       </div>
     </>
   );

@@ -23,44 +23,48 @@ export const experiences = [
     points: [
       ""
     ],
+    description: 'It`s Full-stack project showcasing front-end and back-end integration with API handling.'
   },
-  //   {
-  //   bgPhoto: bgPhoto10,
-  //   title: "E-Commerce",
-  //   link: "https://e-commerce-nu-six-55.vercel.app/",
-  //   company_name: "",
-  //   icon: icon9,
-  //   iconBg: "black",
-  //   date: "",
-  //   points: [
-  //     "It`s Full-stack project showcasing front-end and back-end integration with API handling. "
-  //   ],
-  // },
-  // {
-  //   bgPhoto: fizziBg_1,
-  //   // video: fizziBg_1,
-  //   title: "fizzi",
-  //   link: "https://fizzi-demo.vercel.app/",
-  //   company_name: "",
-  //   icon: icon9,
-  //   iconBg: "black",
-  //   date: "",
-  //   points: [
-  //     ""
-  //   ],
-  // },
-  // {
-  //   bgPhoto: EtrBg_1,
-  //   // video: EtrBg_1,
-  //   title: "عطر",
-  //   link: "https://cote-royale-quiz.netlify.app/quiz",
-  //   company_name: "",
-  //   icon: icon9,
-  //   iconBg: "black",
-  //   date: "",
-  //   points: [
-  //     ""
-  //   ],
-  // },
+    {
+    bgPhoto: bgPhoto10,
+    title: "E-Commerce",
+    link: "https://e-commerce-nu-six-55.vercel.app/",
+    company_name: "",
+    icon: icon9,
+    iconBg: "black",
+    date: "",
+    points: [
+      "It`s Full-stack project showcasing front-end and back-end integration with API handling. "
+    ],
+    description: 'It`s Full-stack project showcasing front-end and back-end integration with API handling.'
+  },
+  {
+    bgPhoto: fizziBg_1,
+    // video: fizziBg_1,
+    title: "fizzi",
+    link: "https://fizzi-demo.vercel.app/",
+    company_name: "",
+    icon: icon9,
+    iconBg: "black",
+    date: "",
+    points: [
+      ""
+    ],
+    description: 'It`s Full-stack project showcasing front-end and back-end integration with API handling.'
+  },
+  {
+    bgPhoto: EtrBg_1,
+    // video: EtrBg_1,
+    title: "عطر",
+    link: "https://cote-royale-quiz.netlify.app/quiz",
+    company_name: "",
+    icon: icon9,
+    iconBg: "black",
+    date: "",
+    points: [
+      ""
+    ],
+    description: 'It`s Full-stack project showcasing front-end and back-end integration with API handling.'
+  },
 ];
 

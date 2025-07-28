@@ -7,7 +7,7 @@ import InfinityScrolling from '../components/home/InfinityScrolling'
 const Home = () => {
   return (
     <div >
-      <LayerMask/>
+      {/* <LayerMask/> */}
       <Hero />
       <PinedProjects/>
       <About />
