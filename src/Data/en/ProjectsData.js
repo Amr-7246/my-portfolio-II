@@ -7,7 +7,7 @@ import {
 } from "../../assets/Animations-Projects";
 import {
     bgPhoto2, bgPhoto7, bgPhoto8, bgPhoto9, bgPhoto10, Formsbg ,
-    icon1, icon2, icon7, icon8, icon9, myGPT,bots
+    icon1, icon2, icon7, icon8, icon9, myGPT,bots, resume_analyzer
 } from "../../assets";
 
 export const experiences = {
@@ -420,6 +420,18 @@ export const experiences = {
         date: "",
         points: [
           "myGPT . . my personal chatGPT local clone using qwen3:8b AI model from ollama and langchain/graph with fastAPI for the AI agent logic"
+        ],
+      },
+      {
+        bgPhoto: resume_analyzer,
+        title: "Resume Analyzer",
+        link: "",
+        company_name: "",
+        icon: icon9,
+        iconBg: "black",
+        date: "",
+        points: [
+          "Using puter.js serverless and AI services I have built an application that take user`s resume and analyze it depending on inputs"
         ],
       },
     ],
