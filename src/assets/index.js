@@ -71,7 +71,7 @@ import icon5 from "./Customize/gym.png"
 import icon6 from "./Customize/favicon.png"
 import icon7 from "./Customize/brainwave-symbol.svg"
 import icon8 from "./Customize/apple.svg"
-import icon9 from "./Customize/photo_2_2025-04-28_02-57-24.jpg"
+import icon9 from "./Media/logo.png"
 // ********** experiens
 // ********** conact
 import gitHub from "./Customize/photo_4_2025-01-11_23-36-58.jpg"

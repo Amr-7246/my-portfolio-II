@@ -59,7 +59,7 @@ const CateCard = ({ iAmHere, className, text, img , setWhichCate }) => {
           onClick={() => setWhichCate(iAmHere)}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className={`${className} overflow-hidden  cursor-pointer absolute translate-x-[-50%] translate-y-[-50%] w-[280px] h-[180px] lg:w-[400px] lg:h-[250px] rounded-xl border border-[var(--border)] flex-center`}
+          className={`${className} overflow-hidden text-[var(--white)] text-[30px] cursor-pointer absolute translate-x-[-50%] translate-y-[-50%] w-[280px] h-[180px] lg:w-[400px] lg:h-[250px] rounded-xl border border-[var(--border)] flex-center`}
         >
           <img className='absolute z-[-1]' src={img} alt="any" />
           <div className='shine' />

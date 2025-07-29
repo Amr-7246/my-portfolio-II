@@ -27,7 +27,18 @@ export const experiences = {
           "It`s Full-stack project showcasing front-end and back-end integration with API handling. "
         ],
       },
-
+      {
+        bgPhoto: resume_analyzer,
+        title: "Resume Analyzer",
+        link: "",
+        company_name: "",
+        icon: icon9,
+        iconBg: "black",
+        date: "",
+        points: [
+          "Using puter.js serverless and AI services I have built an application that take user`s resume and analyze it depending on inputs"
+        ],
+      },
       {
         bgPhoto: suburbiaBg_1,
         // video: suburbiaBg_1,
@@ -398,7 +409,18 @@ export const experiences = {
           "It`s Full-stack project showcasing front-end and back-end integration with API handling. "
         ],
       },
-
+      {
+        bgPhoto: resume_analyzer,
+        title: "Resume Analyzer",
+        link: "",
+        company_name: "",
+        icon: icon9,
+        iconBg: "black",
+        date: "",
+        points: [
+          "Using puter.js serverless and AI services I have built an application that take user`s resume and analyze it depending on inputs"
+        ],
+      },
       {
         bgPhoto: Formsbg,
         title: "Dynamic Form Generator",
@@ -438,6 +460,7 @@ aiProjects : [
           "Using puter.js serverless and AI services I have built an application that take user`s resume and analyze it depending on inputs"
         ],
       },
+
     ],
     botsProjects : [
     {

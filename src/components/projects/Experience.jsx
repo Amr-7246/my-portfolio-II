@@ -64,7 +64,7 @@ import Topper from '../Topper';
               </div>
               :
               <div className="justify-center flex flex-wrap mt-[20%] gap-2 ">
-                <h3 className = "!bg-black border-[1px] !border-[var(--orange)] py-2 px-5 rounded-lg items-center w-fit backdrop-blur-lg md:text-[19px] text-[15px] text-center justify-center flex-center  font-bold cursor-pointer hover:!text-[var(--orange)] flex hover:underline"
+                <h3 className = "!bg-black py-2 px-5 rounded-lg items-center w-fit backdrop-blur-lg md:text-[19px] text-[15px] text-center justify-center flex-center  font-bold cursor-pointer hover:!text-[var(--orange)] flex hover:underline"
                     onClick={() => openWeb(experience.link)}
                     >
                       {experience.title}<span className=" m-2 text-center " ><FiExternalLink/></span>
@@ -72,11 +72,11 @@ import Topper from '../Topper';
               </div>
 
             }
-            <dev className=" rounded-t-sm pb-2 px-3 list-disc mx-auto w-full h-fit backdrop-blur-md !bg-[var(--black)]/50 space-y-2">
+            <dev className=" pb-2 px-3 list-disc mx-auto w-full h-fit backdrop-blur-lg !bg-black/80 space-y-2">
               {experience.points.map((point, index) => (
                 <p
                   key={`experience-point-${index}`}
-                  className=" !font-black text-[14px] text-center tracking-wider !text-[var(--text)] "
+                  className=" !font-black text-[14px] text-center tracking-wider !text-[var(--orange)] "
                 >
                   {point}
                 </p>
@@ -111,14 +111,14 @@ const Experience = () => {
     const botsProjects = experiences.botsProjects
     const AiProjects = experiences.aiProjects
 
-    const selectedCate = WhichCate === 'AI' ? AiProjects : 
+    const selectedCate = WhichCate === 'AI' ? AiProjects :
       WhichCate === 'Animations' ? animationProjects :
       WhichCate === 'Full stack' ? fullstackProjects :
       WhichCate === 'Front End' ? frontendProjects :
       WhichCate === 'Bots' ? botsProjects :
       experiences.allProjects;
   //& end Select category
-  
+
   return (
     <>
       <ProjectsCategories WhichCate={WhichCate} setWhichCate={setWhichCate} />
