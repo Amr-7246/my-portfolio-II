@@ -17,7 +17,7 @@ const SelectedProject = ({ className , project, idx}) => {
         </div>
 
       {/* Project Card */}
-        <div  id={`project-card-${idx}`} className='project-card translate-y-[-50%] relative z-[15] w-[500px] h-[300px] rounded-lg overflow-hidden shadow-2xl' >
+        <div  id={`project-card-${idx}`} className='project-card translate-y-[-50%] relative z-[15] w-[350px] h-[200px] md:w-[500px] md:h-[300px] rounded-lg overflow-hidden shadow-2xl' >
             <img 
             src={project.image || project.bgPhoto} 
             className='w-full h-full object-cover' 

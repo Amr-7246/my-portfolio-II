@@ -22,7 +22,7 @@ const HeroLearMask = () => {
   
   return (
     <div id='hero-lear-mask' className="w-full h-full absolute z-[-1] overflow-hidden">
-      <div id='amr' className=' px-5 absolute text-[100px] md:text-[100px] lg:text-[130px] bottom-[10%] lg:bottom-[0%] right-[-60%] md:right-[-20%] lg:right-[-30%]  '>
+      <div id='amr' className=' px-5 absolute text-[60px] md:text-[100px] lg:text-[130px] bottom-[10%] lg:bottom-[0%] right-[-60%] md:right-[-20%] lg:right-[-30%]  '>
         <h2 className='absolute top-[-5px] right-2 opacity-30 !backdrop-blur-lg'>
           <span>A</span>mr <span>E</span>hab
         </h2>

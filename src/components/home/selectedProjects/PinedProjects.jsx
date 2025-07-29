@@ -219,8 +219,8 @@ const PinedProjects = () => {
 
       </div>
 
-      <div className='mb-[20px] py-5 flex-center gap-[100px] w-full'>
-        <p>just a few, see more right here . . . </p>
+      <div className='mb-[20px] py-5 flex-center md:gap-[100px] gap-[20px] w-full'>
+        <p className='flex flex-row'>just a few <span className='hidden md:flex' >, see more right here</span> . . . </p>
         <a href={'/experines'} className='btn'>All Projects</a>
       </div>
     </div>
