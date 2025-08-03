@@ -17,7 +17,7 @@ const SelectedProject = ({ className , project, idx}) => {
         </div>
 
       {/* Project Card */}
-        <div  id={`project-card-${idx}`} className='project-card translate-y-[-50%] relative z-[15] w-[350px] h-[200px] md:w-[500px] md:h-[300px] rounded-lg overflow-hidden shadow-2xl' >
+        <div  id={`project-card-${idx}`} className='project-card translate-y-[100%] relative z-[15] w-[350px] h-[200px] md:w-[500px] md:h-[300px] rounded-lg overflow-hidden shadow-2xl' >
             <img 
             src={project.image || project.bgPhoto} 
             className='w-full h-full object-cover' 
@@ -61,7 +61,7 @@ export const SideBarShell = ({ className, project, idx, activeProject }) => {
       <div className="sidebar-content mt-3">
         {/* Progress bar */}
         <div className="sidebar-progress-container mb-3">
-          <div className="w-full h-1 bg-gray-200 rounded-full overflow-hidden">
+          <div className="w-full h-1 bg-[var(--text)] rounded-full overflow-hidden">
             <div className="sidebar-progress-bar h-full bg-[var(--orange)] origin-left scale-x-0"></div>
           </div>
         </div>

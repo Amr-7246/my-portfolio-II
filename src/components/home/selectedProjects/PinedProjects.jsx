@@ -16,10 +16,10 @@ const PinedProjects = () => {
   //&################################ Start Side bar & projects animation
       useEffect(() => {
         const ctx = gsap.context(() => {
-          const projectScrollDistance = window.innerHeight * 1;
+          const projectScrollDistance = window.innerHeight * 1 ;
           const totalScrollDistance = ProjectsLength * projectScrollDistance;
 
-          //& Select elements
+          //& Select project elements
             const items = gsap.utils.toArray('.pagenation');
             const bgImg = gsap.utils.toArray('.bg-image');
             const projectCard = gsap.utils.toArray('.project-card');
@@ -32,7 +32,7 @@ const PinedProjects = () => {
             const sidebarProgressBars = gsap.utils.toArray('.sidebar-progress-bar');
             const sidebarDescriptions = gsap.utils.toArray('.sidebar-description');
 
-          //& Set initial states for projects
+          //& Set initial states for project elementes
             gsap.set(bgImg, { opacity: 0 });
             gsap.set(projectCard, { y: '100%', opacity: 0 });
 
@@ -57,11 +57,8 @@ const PinedProjects = () => {
             items.forEach((item, i) => {
               const start = `top+=${cumulativeOffset} top`;
               const end = `+=${projectScrollDistance}`;
-
               const projectBg = item.querySelector('.bg-image');
               const projectCard = item.querySelector('.project-card');
-              const projectBgTl = gsap.timeline({paused : true}).to(projectBg, { opacity: 1, });
-              const projectCardTl = gsap.timeline({paused : true}).to(projectCard, { opacity: 1, y:'50%'});
 
               //& Get corresponding sidebar elements
                 const sidebarItem = sidebarItems[i];
@@ -71,124 +68,135 @@ const PinedProjects = () => {
                 const sidebarProgressBar = sidebarProgressBars[i];
                 const sidebarDescription = sidebarDescriptions[i];
 
-              ScrollTrigger.create({
-                trigger: item,
-                start: start,
-                end: end,
-                scrub: 1,
-                animations: [projectBgTl, projectCardTl] ,
-                //& Animate project elements
-                onUpdate: (self) => {
-                  const progress = self.progress;
+              //~ Start animating the project area 
+                const tl = gsap.timeline({
+                  scrollTrigger : ({
+                      trigger: item,
+                      start: start,
+                      end: end,
+                      scrub: 1,
+                    })
+                  })
 
-                  //& Animate sidebar elements
-                    if (progress > 0) {
+                tl.to(projectBg, { opacity: 1, })
+                .to(projectCard, { opacity: 1, y:'0%'} , "<")
+                .to(projectCard, { opacity: 0, y:'-150%'} )
+                .to( projectBg ,{opacity:0} )
+              //~ End animating the project area 
+              //~ Start animating the sidbare area 
+                ScrollTrigger.create({
+                  trigger: item,
+                  start: start,
+                  end: end,
+                  scrub: 1,
+                  onUpdate: (self) => {
+                    const progress = self.progress;
 
-                      gsap.to([sidebarTitle, sidebarNumber], {
-                        color: 'var(--orange)',
-                        duration: 0.8,
-                        ease: "none"
-                      });
+                    //& Animate sidebar elements
+                      if (progress > 0) {
 
-                      //* Expand sidebar content
-                      gsap.to(thisSideBarContent, {
-                        height: 'auto',
-                        opacity: 1,
-                        duration: 0.8,
-                        ease: "none"
-                      });
+                        gsap.to([sidebarTitle, sidebarNumber], {
+                          color: 'var(--orange)',
+                          duration: 0.8,
+                          ease: "none"
+                        });
 
-                      //* Animate progress bar
-                      gsap.to(sidebarProgressBar, {
-                        scaleX: progress,
-                        duration: 0.1,
-                        ease: "none"
-                      });
+                        //* Expand sidebar content
+                        gsap.to(thisSideBarContent, {
+                          height: 'auto',
+                          opacity: 1,
+                          duration: 0.8,
+                          ease: "none"
+                        });
 
-                      //* Show description
-                      gsap.to(sidebarDescription, {
-                        opacity: 1 ,
-                        y: 0,
-                        duration: 0.8,
-                        ease: "none"
-                      });
-                  } else {
-                      //* Reset to inactive state
-                      gsap.to([sidebarTitle, sidebarNumber], {
-                        color: 'var(--text)',
-                        duration: 0.8,
-                        ease: "none"
-                      });
+                        //* Animate progress bar
+                        gsap.to(sidebarProgressBar, {
+                          scaleX: progress,
+                          duration: 0.1,
+                          ease: "none"
+                        });
 
-                      gsap.to(thisSideBarContent, {
-                        height: 0,
-                        opacity: 0,
-                        duration: 0.8,
-                        ease: "none"
-                      });
+                        //* Show description
+                        gsap.to(sidebarDescription, {
+                          opacity: 1 ,
+                          y: 0,
+                          duration: 0.8,
+                          ease: "none"
+                        });
+                    } else {
+                        //* Reset to inactive state
+                        gsap.to([sidebarTitle, sidebarNumber], {
+                          color: 'var(--text)',
+                          duration: 0.8,
+                          ease: "none"
+                        });
 
-                      gsap.to(sidebarProgressBar, {
-                        scaleX: 0,
-                        duration: 0.8,
-                        ease: "none"
-                      });
+                        gsap.to(thisSideBarContent, {
+                          height: 0,
+                          opacity: 0,
+                          duration: 0.8,
+                          ease: "none"
+                        });
 
-                      gsap.to(sidebarDescription, {
-                        opacity: 0,
-                        y: 10,
-                        duration: 0.8 ,
-                        ease: "none"
-                      });
-                  }
-                },
+                        gsap.to(sidebarProgressBar, {
+                          scaleX: 0,
+                          duration: 0.8,
+                          ease: "none"
+                        });
 
-                onEnter: () => {
-                  setActiveProject(i);
-                  projectBgTl.play();
-                  projectCardTl.play();
-                },
-                onEnterBack: () => {
-                  setActiveProject(i);
-                  projectBgTl.play();
-                  projectCardTl.play();
-                },
-
-                onLeave: () => {
-                  projectBgTl.reverse();
-                  projectCardTl.reverse();
+                        gsap.to(sidebarDescription, {
+                          opacity: 0,
+                          y: 10,
+                          duration: 0.8 ,
+                          ease: "none"
+                        });
+                    }
+                  },
+                  onLeave: () => {
                   //* Reset sidebar to inactive state
-                  gsap.to([sidebarTitle, sidebarNumber], {
-                    color: 'var(--text)',
-                    duration: 0.3,
-                    ease: "power2.out"
-                  });
+                    gsap.to([sidebarTitle, sidebarNumber], {
+                      color: 'var(--text)',
+                      duration: 0.8,
+                      ease: "none"
+                    });
 
-                  gsap.to(thisSideBarContent, {
-                    height: 0,
-                    opacity: 0,
-                    duration: 0.3,
-                    ease: "power2.out"
-                  });
-                },
-                onLeaveBack: () => {
-                  projectBgTl.reverse();
-                  projectCardTl.reverse();
-                  //* Reset sidebar to inactive state
-                  gsap.to([sidebarTitle, sidebarNumber], {
-                    color: 'var(--text)',
-                    duration: 0.3,
-                    ease: "power2.out"
-                  });
+                    gsap.to(thisSideBarContent, {
+                      height: 0,
+                      opacity: 0,
+                      duration: 0.8,
+                      ease: "none"
+                    });
 
-                  gsap.to(thisSideBarContent, {
-                    height: 0,
-                    opacity: 0,
-                    duration: 0.3,
-                    ease: "power2.out"
-                  });
-                }
-              });
+                    gsap.to(sidebarProgressBar, {
+                      scaleX: 0,
+                      duration: 0.8,
+                      ease: "none"
+                    });
 
+                    gsap.to(sidebarDescription, {
+                      opacity: 0,
+                      y: 10,
+                      duration: 0.8 ,
+                      ease: "none"
+                    });
+                  },
+                  // onLeaveBack: () => {
+                  //   //* Reset sidebar to inactive state
+                  //   gsap.to([sidebarTitle, sidebarNumber], {
+                  //     color: 'var(--text)',
+                  //     duration: 0.3,
+                  //     ease: "power2.out"
+                  //   });
+
+                  //   gsap.to(thisSideBarContent, {
+                  //     height: 0,
+                  //     opacity: 0,
+                  //     duration: 0.3,
+                  //     ease: "power2.out"
+                  //   });
+                  // }
+                });
+              //~ End animating the sidbare area 
               cumulativeOffset += projectScrollDistance;
             });
 
@@ -199,6 +207,7 @@ const PinedProjects = () => {
   //&################################ End Side bar animation
   return (
     <div id='pin' ref={containerRef} className='w-full flex flex-col gap-5 '>
+
       <Topper text= { {left : 'My Work' , right : 'Selected Projects'} } className={'!w-[90%] !mx-auto'} />
 
       <div className='w-full h-screen flex flex-row relative' >
@@ -223,91 +232,9 @@ const PinedProjects = () => {
         <p className='flex flex-row'>just a few <span className='hidden md:flex' >, see more right here</span> . . . </p>
         <a href={'/experines'} className='btn'>All Projects</a>
       </div>
+
     </div>
   )
 }
 
 export default PinedProjects
-
-
-  //&################################ Start Projects animation
-      // useEffect(() => {
-      //   const ctx = gsap.context(() => {
-      //     const projectScrollDistance = window.innerHeight * 1 ;
-      //     const totalScrollDistance = ProjectsLength * projectScrollDistance;
-      //     //~ Select elements
-      //       const items = gsap.utils.toArray('.pagenation')
-      //       const bgImg = gsap.utils.toArray('.bg-image')
-      //       const projectCard = gsap.utils.toArray('.project-card')
-      //     //~ Set initial states
-      //       gsap.set(bgImg, { opacity: 0 });
-      //       gsap.set(projectCard, { y: '100%', opacity: 0 });
-
-      //     //& Pin the main container
-      //       ScrollTrigger.create({
-      //         trigger: containerRef.current,
-      //         start: 'top top',
-      //         end: () => `+=${totalScrollDistance}`,
-      //         scrub: 1,
-      //         pin: true,
-      //       });
-
-      //     //& Animate each project
-      //       let cumulativeOffset = 0
-      //       items.forEach((item, i) => {
-      //         const start = `top+=${cumulativeOffset} top`
-      //         const animationDuration = projectScrollDistance
-      //         const end = `+=${animationDuration}`
-      //         const projectBg = item.querySelector('.bg-image');
-      //         const projectCard = item.querySelector('.project-card');
-      //         const projectBgTl = gsap.timeline({paused : true}).to(projectBg, { opacity: 1, });
-      //         const projectCardTl = gsap.timeline({paused : true}).to(projectCard, { opacity: 1, y:'50%'});
-      //         ScrollTrigger.create({
-      //           trigger: item,
-      //           start: start ,
-      //           end: end,
-      //           scrub: 1,
-      //           animations: [projectBgTl, projectCardTl],
-      //           onEnter: () => {
-      //             setActiveProject(i);
-      //             projectBgTl.play();
-      //             projectCardTl.play();
-      //           },
-      //           onLeave: () => {
-      //             projectBgTl.reverse();
-      //             projectCardTl.reverse();
-      //           },
-      //           onEnterBack: () => {
-      //             setActiveProject(i);
-      //             projectBgTl.play();
-      //             projectCardTl.play();
-      //           },
-      //           onLeaveBack: () => {
-      //             projectBgTl.reverse();
-      //             projectCardTl.reverse();
-      //           },
-      //         })
-      //         cumulativeOffset+=animationDuration
-      //       })
-
-      //     //& Progressive line animation
-      //       const progressLine = containerRef.current.querySelector('#progress-line');
-      //       if (progressLine) {
-      //         gsap.to(progressLine, {
-      //           scaleY: 1,
-      //           transformOrigin: 'top',
-      //           scrollTrigger: {
-      //             trigger: containerRef.current,
-      //             start: `top top`,
-      //             end: `bottom+=${totalScrollDistance} bottom`,
-      //             scrub: 1
-      //           }
-      //         });
-      //       }
-
-      //   }, containerRef);
-
-      //   return () => ctx.revert();
-      // }, []);
-  //&################################ End Projects animation
-
