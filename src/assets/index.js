@@ -42,8 +42,8 @@ import close from "./close.svg";
 // ********** navBar
 import Logo from "./Media/logo.png"
 import Amr from "./Customize/photo_8_2025-01-07_22-36-57.jpg"
-import comingSoonImg from "./SVG/Innovation-amico.svg"
-import hero_1 from "./SVG/Code typing-bro.svg"
+import comingSoonImg from "./svg/Innovation-amico.svg"
+import hero_1 from "./svg/Code typing-bro.svg"
 import bgNav from "./Customize/photo_10_2025-01-07_22-36-57.jpg"
 import bgNav2 from "./Customize/photo_7_2025-01-09_01-14-24.jpg"
 import bgNav3 from "./Customize/photo_6_2025-01-09_01-14-24.jpg"
@@ -82,17 +82,17 @@ import whatsApp from "./Customize/photo_11_2025-01-11_23-36-58.jpg"
 import gmail from "./Customize/photo_10_2025-01-11_23-36-58.jpg"
 // ********** conact
 // ********** infinity scrolling section
-import AIDeveloper from "./SVG/infinityScrolling/ai-developer.svg";
-import backend from "./SVG/infinityScrolling/backend.svg";
-import freelancer from "./SVG/infinityScrolling/freelancer.svg";
-import frontend from "./SVG/infinityScrolling/frontend.svg";
-import fullstack from "./SVG/infinityScrolling/fullstack.svg";
-import mern1 from "./SVG/infinityScrolling/mern-stack.svg";
-import mern2 from "./SVG/infinityScrolling/mern-stack-2.svg";
-import programmer from "./SVG/infinityScrolling/programmer.svg";
-import projectManger from "./SVG/infinityScrolling/projectManger.svg";
-import systemDesign from "./SVG/infinityScrolling/system-design.svg";
-import systemDesign2 from "./SVG/infinityScrolling/system-design-2.svg";
+import AIDeveloper from "./svg/infinityScrolling/ai-developer.svg";
+import backend from "./svg/infinityScrolling/backend.svg";
+import freelancer from "./svg/infinityScrolling/freelancer.svg";
+import frontend from "./svg/infinityScrolling/frontend.svg";
+import fullstack from "./svg/infinityScrolling/fullstack.svg";
+import mern1 from "./svg/infinityScrolling/mern-stack.svg";
+import mern2 from "./svg/infinityScrolling/mern-stack-2.svg";
+import programmer from "./svg/infinityScrolling/programmer.svg";
+import projectManger from "./svg/infinityScrolling/projectManger.svg";
+import systemDesign from "./svg/infinityScrolling/system-design.svg";
+import systemDesign2 from "./svg/infinityScrolling/system-design-2.svg";
 // ********** infinity scrolling section
 
 export {
