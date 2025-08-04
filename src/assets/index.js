@@ -82,7 +82,7 @@ import whatsApp from "./Customize/photo_11_2025-01-11_23-36-58.jpg"
 import gmail from "./Customize/photo_10_2025-01-11_23-36-58.jpg"
 // ********** conact
 // ********** infinity scrolling section
-import AIDeveloper from "./SVG/infinityScrolling/AI-developer.svg";
+import AIDeveloper from "./SVG/infinityScrolling/ai-developer.svg";
 import backend from "./SVG/infinityScrolling/backend.svg";
 import freelancer from "./SVG/infinityScrolling/freelancer.svg";
 import frontend from "./SVG/infinityScrolling/frontend.svg";
