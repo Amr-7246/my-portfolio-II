@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
 import { SectionWrapper } from '../../hoc';
 import { fadeIn, textVariant } from '../../utils/motion';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
@@ -14,25 +13,8 @@ import { AboutDataForCompany as enAboutDataForCompany , AboutDataForClient as en
 import Button from "../Balls_Button/Balls_Button"
 import ChangeLang from '../ChangeLang';
 import Topper from '../Topper';
-
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
-    {/* <motion.div variants={fadeIn('top', 'spring', index * 0.5, 0.75)} className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card" > */}
-    <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card" >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="!bg-[var(--black)] rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img src={icon} alt="web-development" className="w-16 h-16 object-contain" loading="lazy" />
-        <h3 className="!text-[var(--text)] text-[20px] font-bold text-center">{title}</h3>
-      </div>
-    </div>
-  </Tilt>
-);
+import ThreeDCard from '../../../components/ThreeDCard';
+import InfinityScrolling from './InfinityScrolling';
 
 const About = () => {
 
@@ -56,17 +38,15 @@ const About = () => {
 
   return (
     <>
-      <motion.div className='mb-10 flex flex-col gap-[40px]' id='about'>
-        {/* <h2 className={`font-bold text-[50px] text-transparent bg-clip-text w-fit bg-gradient-to-r from-[var(--from)] via-[var(--via)]  to-[var(--to)]`}>Overview</h2> */}
-        <div>
-          <OverviewCard/>
-        </div>
+      <motion.div className=' mb-10 flex flex-col gap-[40px]' id='about'>
+        <OverviewCard/>
       </motion.div>
+      <InfinityScrolling />
       <div>
         <Topper text= { {left : 'Tech Stack' , right : 'My recent technologies'} } className={''} />
         <div className="mt-20 flex flex-wrap justify-center gap-10">
           {services.map((service, index) => (
-            <ServiceCard key={service.title} index={index} {...service} />
+            <ThreeDCard key={service.title} index={index} {...service} />
           ))}
         </div>
       </div>

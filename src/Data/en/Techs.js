@@ -1,15 +1,17 @@
 import { 
-  javascript, Typescript, Next, html, python , css, reactjs , tailwind, nodejs, git, threejs
+  GSAP,javascript, Typescript, Next, html, python , css, reactjs , tailwind, nodejs, git, threejs
 } from "../../assets";
 
 // * ############# start services 
 export const services = [
-  { title: "Javascript", icon: javascript },
-  { title: "Typescript", icon: Typescript }, 
-  { title: "Next.JS", icon: Next },
   { title: "React", icon: reactjs }, 
-  { title: "Python", icon: python }, 
+  { title: "Next.JS", icon: Next },
+  { title: "Typescript", icon: Typescript }, 
+  { title: "Javascript", icon: javascript },
+  { title: "GSAP", icon: GSAP },
+  { title: "tailwind CSS", icon: tailwind },
   { title: "Node.JS", icon: nodejs },
+  { title: "Python", icon: python }, 
 ];
 // * ############# end services
 // * ############# start technologies *

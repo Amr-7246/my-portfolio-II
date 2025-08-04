@@ -12,8 +12,10 @@
 
   "about": {
     "OverveiwCard" : {
-      "fastPref" : "Dynamic Software Developer with a real passion for coding and solving problems. Proficient in modern web tech like React, Next.js, Node.js, and AI-powered tools. And I’ve already built real-world projects and I’m always ready to learn more. I thrive in a collaborative environment and aim to build clean, user-friendly experiences that actually work." ,
-      "button" : "contact me now",
+      "fastPref" : "fullstack software Developer with 1-2 years of practical, end-to-end experience crafting scalable, high-performance, and visually dynamic applications from clean, animated UIs to backend logic. . . . . While I operate as a full-stack freelancer, I've intentionally chosen to specialize in Frontend Engineering not just coding interfaces, but engineering immersive, interactive, performance-driven, accessible experiences powered by tools like React.js, Next.js, GSAP, Framer Motion, and TypeScript. . . ." ,
+      "experience" : "Working in the freelance ecosystem gave me a 360° perspective of the full software lifecycle, from system design to deployment, from DevOps to testing, from security concerns to UX feedback loops.  That shaped my ability to work fluidly across teams backend teams: backend developers, designers, DevOps, security specialists and even AI engineers. . ." ,
+      "comingSoon" : "Recently, I’ve stepped into the world of AI-powered software, Exployting my robust foundation language - python I mean - to build AI agents (into FastAPI server with LangChain/Graph) or even implement AI pre-built service (like row openAI API & Puter.js) into my apps,  This continuous expansion isn’t just about exploring backend intelligence, it’s a strategic move to amplify my frontend expertise. By understanding how AI systems work, I can craft smarter, context-aware user interfaces. It empowers me to collaborate fluidly with AI teams as a frontend specialist and gives me the leverage to lead and deliver AI-driven projects confidently as a freelancer. . . . ." ,
+      "button" : "contact me",
       "expirence" : 1,
       "ProjectsCount" : 12
     },

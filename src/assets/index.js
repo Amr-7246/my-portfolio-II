@@ -24,6 +24,7 @@ import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import Typescript from "./tech/photo_1_2025-02-27_14-53-51.jpg";
 import Next from "./tech/photo_2_2025-02-27_14-53-51.jpg";
+import GSAP from "./tech/GSAP.jpg";
 import nodejs from "./tech/nodejs.png";
 import vite from "../assets/Customize/vite.svg";
 import reactjs from "./tech/reactjs.png";
@@ -41,6 +42,7 @@ import close from "./close.svg";
 // ********** navBar
 import Logo from "./Media/logo.png"
 import Amr from "./Customize/photo_8_2025-01-07_22-36-57.jpg"
+import comingSoonImg from "./SVG/Innovation-amico.svg"
 import hero_1 from "./SVG/Code typing-bro.svg"
 import bgNav from "./Customize/photo_10_2025-01-07_22-36-57.jpg"
 import bgNav2 from "./Customize/photo_7_2025-01-09_01-14-24.jpg"
@@ -79,9 +81,22 @@ import faceBook from "./Customize/photo_7_2025-01-11_23-36-58.jpg"
 import whatsApp from "./Customize/photo_11_2025-01-11_23-36-58.jpg"
 import gmail from "./Customize/photo_10_2025-01-11_23-36-58.jpg"
 // ********** conact
+// ********** infinity scrolling section
+import AIDeveloper from "./SVG/infinityScrolling/AI-developer.svg";
+import backend from "./SVG/infinityScrolling/backend.svg";
+import freelancer from "./SVG/infinityScrolling/freelancer.svg";
+import frontend from "./SVG/infinityScrolling/frontend.svg";
+import fullstack from "./SVG/infinityScrolling/fullstack.svg";
+import mern1 from "./SVG/infinityScrolling/mern-stack.svg";
+import mern2 from "./SVG/infinityScrolling/mern-stack-2.svg";
+import programmer from "./SVG/infinityScrolling/programmer.svg";
+import projectManger from "./SVG/infinityScrolling/projectManger.svg";
+import systemDesign from "./SVG/infinityScrolling/system-design.svg";
+import systemDesign2 from "./SVG/infinityScrolling/system-design-2.svg";
+// ********** infinity scrolling section
 
 export {
-  Logo, Amr,hero_1, bgNav, bgNav2, bgNav3, navList, navList2,
+  Logo, Amr, comingSoonImg ,hero_1, bgNav, bgNav2, bgNav3, navList, navList2,
   bgPhoto, bgPhoto2, bgPhoto3, bgPhoto4, bgPhoto5, bgPhoto6, bgPhoto7, bgPhoto8, bgPhoto9, bgPhoto10,
   Formsbg ,myGPT, bots ,resume_analyzer ,
   icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9,
@@ -90,10 +105,13 @@ export {
   faceBook,
   whatsApp,
   gmail,
+// ********** infinity scrolling section
+  AIDeveloper, backend, freelancer, frontend, fullstack, mern1, mern2, programmer, projectManger, systemDesign, systemDesign2,
+// ********** infinity scrolling section
   // *********
   mathwork,
   edunet,
-  python, c, cpp, java, github, css, git, html, javascript, Typescript, Next, nodejs, reactjs, tailwind, threejs,
+  python, c, cpp, java, github, css, git, html, javascript, Typescript, Next,GSAP, nodejs, reactjs, tailwind, threejs,
   weatherpedia,
   termpw,
   payloadmaster,
