@@ -42,7 +42,7 @@ import close from "./close.svg";
 // ********** navBar
 import Logo from "./Media/logo.png"
 import Amr from "./Customize/photo_8_2025-01-07_22-36-57.jpg"
-import comingSoonImg from "./svg/innovation-amico.svg"
+import comingSoonImg from "./svg/commingsoon.svg"
 import hero_1 from "./svg/Code typing-bro.svg"
 import bgNav from "./Customize/photo_10_2025-01-07_22-36-57.jpg"
 import bgNav2 from "./Customize/photo_7_2025-01-09_01-14-24.jpg"
