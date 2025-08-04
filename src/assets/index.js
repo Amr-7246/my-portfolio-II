@@ -82,17 +82,17 @@ import whatsApp from "./Customize/photo_11_2025-01-11_23-36-58.jpg"
 import gmail from "./Customize/photo_10_2025-01-11_23-36-58.jpg"
 // ********** conact
 // ********** infinity scrolling section
-import AIDeveloper from "./svg/infinity-scrolling/ai-developer.svg";
-import backend from "./svg/infinity-scrolling/backend.svg";
-import freelancer from "./svg/infinity-scrolling/freelancer.svg";
-import frontend from "./svg/infinity-scrolling/frontend.svg";
-import fullstack from "./svg/infinity-scrolling/fullstack.svg";
-import mern1 from "./svg/infinity-scrolling/mern-stack.svg";
-import mern2 from "./svg/infinity-scrolling/mern-stack-2.svg";
-import programmer from "./svg/infinity-scrolling/programmer.svg";
-import projectManger from "./svg/infinity-scrolling/projectManger.svg";
-import systemDesign from "./svg/infinity-scrolling/system-design.svg";
-import systemDesign2 from "./svg/infinity-scrolling/system-design-2.svg";
+import AIDeveloper from "./svg/ai-developer.svg";
+import backend from "./svg/backend.svg";
+import freelancer from "./svg/freelancer.svg";
+import frontend from "./svg/frontend.svg";
+import fullstack from "./svg/fullstack.svg";
+import mern1 from "./svg/mern-stack.svg";
+import mern2 from "./svg/mern-stack-2.svg";
+import programmer from "./svg/programmer.svg";
+import projectManger from "./svg/projectManger.svg";
+import systemDesign from "./svg/system-design.svg";
+import systemDesign2 from "./svg/system-design-2.svg";
 // ********** infinity scrolling section
 
 export {
