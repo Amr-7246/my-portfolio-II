@@ -7,7 +7,7 @@ import {
 } from "../../../assets/Animations-Projects";
 import {
     bgPhoto2, bgPhoto7, bgPhoto8, bgPhoto9, bgPhoto10, Formsbg ,
-    icon1, icon2, icon7, icon8, icon9, clinicBg
+    icon1, icon2, icon7, icon8, icon9, clinicBg, hotelFront
 } from "../../../assets";
 
 export const experiences = [
@@ -22,6 +22,7 @@ export const experiences = [
     points: [
       "It`s Full-stack project that handle the clinics Appointments online and offline"
     ],
+    description: 'It`s Full-stack project that handle the clinics Appointments online and offline',
   },
   {
     bgPhoto: suburbiaBg_1,
@@ -36,6 +37,19 @@ export const experiences = [
       "Implemented full-page scroll-based animations to enhance user immersion."
     ],
     description: 'An interactive frontend experience demonstrating fluid animations, modern scroll effects, and clean UI architecture.',
+  },
+  {
+    bgPhoto: hotelFront,
+    title: "QuickStay",
+    link: "https://hb-gs.vercel.app/",
+    company_name: "",
+    icon: icon9,
+    iconBg: "black",
+    date: "",
+    points: [
+      "It`s Full-stack hotels project that server the Hotels operations"
+    ],
+    description: "It`s Full-stack hotels project that server the Hotels operations"
   },
   {
     bgPhoto: bgPhoto10,

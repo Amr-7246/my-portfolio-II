@@ -10,13 +10,13 @@ import { openWeb } from '../../../hoc/navigation';
 gsap.registerPlugin(ScrollTrigger);
 
 const PinedProjects = () => {
-  const ProjectsLength = 3
+  const ProjectsLength = 5
   const containerRef = useRef(null);
   const [activeProject, setActiveProject] = useState(0);
   //&################################ Start Side bar & projects animation
       useEffect(() => {
         const ctx = gsap.context(() => {
-          const projectScrollDistance = window.innerHeight * 1 ;
+          const projectScrollDistance = window.innerHeight * 2 ;
           const totalScrollDistance = ProjectsLength * projectScrollDistance;
 
           //& Select project elements
@@ -68,7 +68,7 @@ const PinedProjects = () => {
                 const sidebarProgressBar = sidebarProgressBars[i];
                 const sidebarDescription = sidebarDescriptions[i];
 
-              //~ Start animating the project area 
+              //~ Start animating the project area
                 const tl = gsap.timeline({
                   scrollTrigger : ({
                       trigger: item,
@@ -82,8 +82,8 @@ const PinedProjects = () => {
                 .to(projectCard, { opacity: 1, y:'0%'} , "<")
                 .to(projectCard, { opacity: 0, y:'-150%'} )
                 .to( projectBg ,{opacity:0} )
-              //~ End animating the project area 
-              //~ Start animating the sidbare area 
+              //~ End animating the project area
+              //~ Start animating the sidbare area
                 ScrollTrigger.create({
                   trigger: item,
                   start: start,
@@ -196,7 +196,7 @@ const PinedProjects = () => {
                   //   });
                   // }
                 });
-              //~ End animating the sidbare area 
+              //~ End animating the sidbare area
               cumulativeOffset += projectScrollDistance;
             });
 
@@ -217,6 +217,8 @@ const PinedProjects = () => {
             <SelectedProject className={''} project={experiences[0]} idx={'0'}/>
             <SelectedProject className={''} project={experiences[1]} idx={'1'}/>
             <SelectedProject className={''} project={experiences[2]} idx={'2'}/>
+            <SelectedProject className={''} project={experiences[3]} idx={'2'}/>
+            <SelectedProject className={''} project={experiences[4]} idx={'2'}/>
           </div>
 
         {/* SideBarShell */}
@@ -224,6 +226,8 @@ const PinedProjects = () => {
             <SideBarShell activeProject={activeProject} className={''} project={experiences[0]} idx={'0'}/>
             <SideBarShell activeProject={activeProject} className={''} project={experiences[1]} idx={'1'}/>
             <SideBarShell activeProject={activeProject} className={''} project={experiences[2]} idx={'2'}/>
+            <SideBarShell activeProject={activeProject} className={''} project={experiences[3]} idx={'3'}/>
+            <SideBarShell activeProject={activeProject} className={''} project={experiences[4]} idx={'4'}/>
           </div>
 
       </div>

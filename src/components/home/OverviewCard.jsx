@@ -11,6 +11,7 @@ import ChangeLang from '../ChangeLang.tsx';
 import Topper from '../Topper.jsx';
 import TextAnimator from '../../../components/TextAnimator.jsx';
 import SmartLearning from './SmartLearning.jsx';
+import InfinityScrolling from './InfinityScrolling.jsx';
 
 export const OverviewCard = () => {
   //~ Start Hooks & Data ########################
@@ -100,6 +101,7 @@ export const OverviewCard = () => {
             <TextAnimator text={experience} className={''} animation={'chuncks'} />
           </div>
         </div>
+        <InfinityScrolling />
       {/* comming soon Section */}
         <div className='flex-center flex-col lg:flex-row-reverse gap-[50px] ' >
           <div className=' w-[50%]'>
@@ -108,7 +110,7 @@ export const OverviewCard = () => {
           <TextAnimator text={comingSoon} className={''} animation={'chuncks'} />
         </div>
       {/* Smart Learning section*/}
-        {/* <SmartLearning /> */}
+        <SmartLearning />
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import {
-    fizziBg_1,
-    EtrBg_1,
-    suburbiaBg_1,
-    Ali_DevBg_1,
-    glistenBg_1,
+  fizziBg_1,
+  EtrBg_1,
+  suburbiaBg_1,
+  Ali_DevBg_1,
+  glistenBg_1,
 } from "../../assets/Animations-Projects";
 import {
-    bgPhoto2, bgPhoto7, bgPhoto8, bgPhoto9, bgPhoto10, Formsbg ,
-    icon1, icon2, icon7, icon8, icon9, myGPT,bots, resume_analyzer, clinicBg
+  bgPhoto2, bgPhoto7, bgPhoto8, bgPhoto9, bgPhoto10, Formsbg ,
+  icon1, icon2, icon7, icon8, icon9, myGPT,bots, resume_analyzer,
+  clinicBg, hotelFront, ecommerce_2_front, ecommerce_3_front, jobsFront
 } from "../../assets";
 
 export const experiences = {
@@ -37,6 +38,30 @@ export const experiences = {
         ],
       },
       {
+        bgPhoto: hotelFront,
+        title: "QuickStay",
+        link: "https://hb-gs.vercel.app/",
+        company_name: "",
+        icon: icon9,
+        iconBg: "black",
+        date: "",
+        points: [
+          "It`s Full-stack hotels project that server the Hotels operations"
+        ],
+      },
+      {
+        bgPhoto: jobsFront,
+        title: "insider Jobs",
+        link: "https://job-portal-gs-client.vercel.app/",
+        company_name: "",
+        icon: icon9,
+        iconBg: "black",
+        date: "",
+        points: [
+          "a project that allow user to search for jobs and apply for them, it has admin panel to manage the jobs and users"
+        ],
+      },
+      {
         bgPhoto: resume_analyzer,
         title: "Resume Analyzer",
         link: "",
@@ -46,6 +71,30 @@ export const experiences = {
         date: "",
         points: [
           "Using puter.js serverless and AI services I have built an application that take user`s resume and analyze it depending on inputs"
+        ],
+      },
+      {
+        bgPhoto: ecommerce_2_front ,
+        title: "Quick Cart",
+        link: "https://quickcart.greatstack.in/",
+        company_name: "",
+        icon: icon9,
+        iconBg: "#161329",
+        date: "",
+        points: [
+          "It`s Full-stack E-commerce project that allow user to search and filter products and add them to cart and checkout with payment gateway"
+        ],
+      },
+      {
+        bgPhoto: ecommerce_3_front ,
+        title: "Forever",
+        link: "https://foreverbuy.in/",
+        company_name: "",
+        icon: icon9,
+        iconBg: "#161329",
+        date: "",
+        points: [
+          "It`s Full-stack E-commerce project that allow user to search and filter products and add them to cart and checkout with payment gateway"
         ],
       },
       {
@@ -119,7 +168,7 @@ export const experiences = {
         title: "Dynamic Form Generator",
         link: "https://dynamic-forms-theta.vercel.app/",
         company_name: "",
-        icon: icon1,
+        icon: icon9,
         iconBg: "#161329",
         date: "",
         points: [
@@ -131,7 +180,7 @@ export const experiences = {
         title: "Some Skills",
         link: "https://raise-skills.vercel.app/",
         company_name: "",
-        icon: icon1,
+        icon: icon9,
         iconBg: "#161329",
         date: "",
         points: [
@@ -338,7 +387,7 @@ export const experiences = {
         title: "Some Skills",
         link: "https://raise-skills.vercel.app/",
         company_name: "",
-        icon: icon1,
+        icon: icon9,
         iconBg: "#161329",
         date: "",
         points: [
@@ -431,6 +480,30 @@ export const experiences = {
         ],
       },
       {
+        bgPhoto: hotelFront,
+        title: "QuickStay",
+        link: "https://hb-gs.vercel.app/",
+        company_name: "",
+        icon: icon9,
+        iconBg: "black",
+        date: "",
+        points: [
+          "It`s Full-stack hotels project that server the Hotels operations"
+        ],
+      },
+      {
+        bgPhoto: jobsFront,
+        title: "insider Jobs",
+        link: "https://job-portal-gs-client.vercel.app/",
+        company_name: "",
+        icon: icon9,
+        iconBg: "black",
+        date: "",
+        points: [
+          "a project that allow user to search for jobs and apply for them, it has admin panel to manage the jobs and users"
+        ],
+      },
+      {
         bgPhoto: resume_analyzer,
         title: "Resume Analyzer",
         link: "",
@@ -443,15 +516,27 @@ export const experiences = {
         ],
       },
       {
-        bgPhoto: Formsbg,
-        title: "Dynamic Form Generator",
-        link: "https://dynamic-forms-theta.vercel.app/",
+        bgPhoto: ecommerce_2_front ,
+        title: "Quick Cart",
+        link: "https://quickcart.greatstack.in/",
         company_name: "",
-        icon: icon1,
+        icon: icon9,
         iconBg: "#161329",
         date: "",
         points: [
-          "It`s an application that allow user to generate multi fully customized forms with its links "
+          "It`s Full-stack E-commerce project that allow user to search and filter products and add them to cart and checkout with payment gateway"
+        ],
+      },
+      {
+        bgPhoto: ecommerce_3_front ,
+        title: "Forever",
+        link: "https://foreverbuy.in/",
+        company_name: "",
+        icon: icon9,
+        iconBg: "#161329",
+        date: "",
+        points: [
+          "It`s Full-stack E-commerce project that allow user to search and filter products and add them to cart and checkout with payment gateway"
         ],
       },
   ],

@@ -60,6 +60,10 @@ import bgPhoto8 from "./Customize/photo_2025-02-27_14-15-20.jpg"
 import bgPhoto9 from "./Customize/photo_2025-04-04_04-53-14.png"
 import bgPhoto10 from "./Customize/photo_11_2025-07-19_11-16-31.jpg"
 import clinicBg from "./Customize/projects/frontimage.png"
+import hotelFront from "./Customize/projects/fronthotel.jpg"
+import ecommerce_2_front from "./Customize/projects/ecommerce2front.jpg"
+import ecommerce_3_front from "./Customize/projects/ecommerce3front.jpg"
+import jobsFront from "./Customize/projects/jobfront.jpg"
 import myGPT from "./Customize/myGpt.png"
 import resume_analyzer from "./Customize/projects/resume_analyzer.png"
 import bots from "./Customize/Bot_1.png"
@@ -99,7 +103,7 @@ import systemDesign2 from "./system-design-2.svg";
 export {
   Logo, Amr, comingSoonImg ,hero_1, bgNav, bgNav2, bgNav3, navList, navList2,
   bgPhoto, bgPhoto2, bgPhoto3, bgPhoto4, bgPhoto5, bgPhoto6, bgPhoto7, bgPhoto8, bgPhoto9, bgPhoto10,clinicBg,
-  Formsbg ,myGPT, bots ,resume_analyzer ,
+  Formsbg ,myGPT, bots ,resume_analyzer , hotelFront,ecommerce_2_front,ecommerce_3_front,jobsFront,
   icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9,
   vite,
   gitHub,

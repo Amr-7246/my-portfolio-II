@@ -62,7 +62,6 @@ const About = () => {
         <div>
           <OverviewCard/>
         </div>
-        <InfinityScrolling/>
       </motion.div>
       <div>
         <Topper text= { {left : 'Tech Stack' , right : 'My recent technologies'} } className={''} />
