@@ -46,3 +46,8 @@
   border-radius: 4px;
   padding: 6px 12px;
 }
+.clip-path-container {
+  clip-path: inset(0 0 0 0);
+  will-change: clip-path;
+}
+

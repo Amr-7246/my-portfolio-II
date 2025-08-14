@@ -14,6 +14,7 @@ import { AboutDataForCompany as enAboutDataForCompany , AboutDataForClient as en
 import Button from "../Balls_Button/Balls_Button"
 import ChangeLang from '../ChangeLang';
 import Topper from '../Topper';
+import InfinityScrolling from "./InfinityScrolling"
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -61,6 +62,7 @@ const About = () => {
         <div>
           <OverviewCard/>
         </div>
+        <InfinityScrolling/>
       </motion.div>
       <div>
         <Topper text= { {left : 'Tech Stack' , right : 'My recent technologies'} } className={''} />

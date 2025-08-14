@@ -12,7 +12,7 @@ const App = () => {
       <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true, }} >
         <AnalyticsHandler />
         <div className="relative z-0 font-rubikDistressed bg-[var(--black)] text-[var(--text)] ">
-          <Navbar />
+          {/* <Navbar /> */}
           <AppRoutes/>
         </div>
       </BrowserRouter>
