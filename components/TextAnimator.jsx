@@ -8,7 +8,7 @@ const TextAnimator = ({text, animation , className}) => {
   const textContainer = useRef(null)
 
   useEffect(() => {
-    if (textContainer.current == null) return; 
+    if (textContainer.current == null) return;
     const animatedText = textContainer.current == null ? '.chunck' : textContainer.current.querySelectorAll('.chunck')
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
@@ -48,11 +48,11 @@ const TextAnimator = ({text, animation , className}) => {
     return () => ctx.revert()
   }, [])
   return (
-    <div ref={textContainer} className={`w-full text-container ${className}`} >
+    <div ref={textContainer} className={`w-full text-container text-white ${className}`} >
       {
         animation == 'chuncks' ?
         //& Chuncks Animation
-          <p className='text w-fit flex flex-row flex-wrap bg-stone-600' >
+          <p className=' w-fit flex flex-row flex-wrap ' >
             { text.split(' ').map((chunck,idx) => (
                 <span
                 style={{
@@ -61,7 +61,7 @@ const TextAnimator = ({text, animation , className}) => {
                 perspective:'600px',
                 willChange: 'opacity, transform'
                   }}
-                className='chunck opacity-0 rounded-lg mx-5 p-1'
+                className='chunck opacity-0 rounded-lg p-1 '
                 key={idx} >
                   {chunck}
                 </span>

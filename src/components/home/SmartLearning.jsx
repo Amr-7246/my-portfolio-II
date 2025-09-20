@@ -170,7 +170,7 @@ const SmartLearning = () => {
   ];
 
   return (
-    <div ref={container} className="flex justify-center items-center flex-row gap-[100px] w-full relative overflow-hidden min-h-screen">
+    <div ref={container} className="flex justify-center items-center flex-row gap-[100px] w-full relative overflow-hidden ">
 
       {icons.map((icon, i) => (
         <div

@@ -2,7 +2,7 @@ module.exports = {
   corePlugins: {
     backgroundClip: true,
   },
-  content: ['./src/**/*.{js,jsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   mode: 'jit',
   theme: {
     extend: {

@@ -1,17 +1,24 @@
-import { 
-  GSAP,javascript, Typescript, Next, html, python , css, reactjs , tailwind, nodejs, git, threejs
+import {
+  GSAP,javascript, Typescript, Next, html, python , css, reactjs ,
+  tailwind, nodejs, git, threejs,laravel,fastAPI, expo, reactNative, express, php
 } from "../../assets";
 
-// * ############# start services 
+// * ############# start services
 export const services = [
-  { title: "React", icon: reactjs }, 
+  { title: "Laravel", icon: laravel },
+  { title: "PHP", icon: php },
+  { title: "Node.JS", icon: nodejs },
+  { title: "express.js", icon: express },
+  { title: "fastAPI", icon: fastAPI },
+  { title: "Python", icon: python },
+  { title: "React", icon: reactjs },
   { title: "Next.JS", icon: Next },
-  { title: "Typescript", icon: Typescript }, 
+  { title: "React Native", icon: reactNative },
+  { title: "Expo", icon: expo },
+  { title: "Typescript", icon: Typescript },
   { title: "Javascript", icon: javascript },
   { title: "GSAP", icon: GSAP },
   { title: "tailwind CSS", icon: tailwind },
-  { title: "Node.JS", icon: nodejs },
-  { title: "Python", icon: python }, 
 ];
 // * ############# end services
 // * ############# start technologies *

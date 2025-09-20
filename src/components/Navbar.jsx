@@ -83,7 +83,7 @@ const Navbar = () => {
                       <span className=' '>{navLinks[suggestIdx].title} ?!</span>
                     </motion.div>
                   </AnimatePresence>
-                  <a href={navLinks[suggestIdx].id} className='ml-2 !text-[var(--orange)] w-[40px] h-[40px] rounded-full flex items-center justify-center p-2 border !border-[var(--orange)] underline underline-offset-2 hover:!text-[var(--hovered-text)] transition-colors duration-300' >
+                  <a href={navLinks[suggestIdx].id} className='ml-2 !text-[var(--green)] w-[40px] h-[40px] rounded-full flex items-center justify-center p-2 border !border-[var(--green)] underline underline-offset-2 hover:!text-[var(--hovered-text)] transition-colors duration-300' >
                     Go
                   </a>
                 </div>

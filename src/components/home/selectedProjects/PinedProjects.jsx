@@ -6,6 +6,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Topper from '../../Topper';
 import SelectedProject, { SideBarShell } from './SelectedProject';
 import { openWeb } from '../../../hoc/navigation';
+import { IconicBtn } from '../../../../components/Buttons';
+import { FaProjectDiagram, FaList } from 'react-icons/fa';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -232,9 +234,10 @@ const PinedProjects = () => {
 
       </div>
 
-      <div className='mb-[20px] py-5 flex-center md:gap-[100px] gap-[20px] w-full'>
+      <div className='mb-[20px] py-5 flex-center md:gap-[100px] gap-[20px] w-full backdrop-blur-xl '>
         <p className='flex flex-row'>just a few <span className='hidden md:flex' >, see more right here</span> . . . </p>
-        <a href={'/experines'} className='btn'>All Projects</a>
+        <IconicBtn text={"All Projects"} icon={<FaProjectDiagram />} iconStyle={" text-orange-500 "} buttonColors={"bg-stone-400/10 shadow-lg shadow-stone-500/10 btn backdrop-blur-6xl text-orange-500 px-8 "} />
+        {/* <a href={'/experines'} className='btn'>All Projects</a> */}
       </div>
 
     </div>

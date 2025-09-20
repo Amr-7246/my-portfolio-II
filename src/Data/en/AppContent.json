@@ -12,12 +12,21 @@
 
   "about": {
     "OverveiwCard" : {
-      "fastPref" : "fullstack software Developer with 1-2 years of practical, end-to-end experience crafting scalable, high-performance, and visually dynamic applications from clean, animated UIs to backend logic. . . . . While I operate as a full-stack freelancer, I've intentionally chosen to specialize in Frontend Engineering not just coding interfaces, but engineering immersive, interactive, performance-driven, accessible experiences powered by tools like React.js, Next.js, GSAP, Framer Motion, and TypeScript. . . ." ,
+      "fastPref" : "My Name is Amr Ehab, I`m a fullstack software Developer with practical, end-to-end experience crafting scalable, high-performance, and visually dynamic web/moblie applications from clean, animated UIs to backend logics and DB operations . . . . . While I operate as a full-stack freelancer, I've intentionally chosen to specialize in Frontend Engineering not just coding interfaces, but engineering immersive, interactive, performance-driven, accessible experiences powered by tools like React.js, Next.js, GSAP, Framer Motion, and TypeScript. . . ." ,
       "experience" : "Working in the freelance ecosystem gave me a 360° perspective of the full software lifecycle, from system design to deployment, from DevOps to testing, from security concerns to UX feedback loops.  That shaped my ability to work fluidly across teams backend teams: backend developers, designers, DevOps, security specialists and even AI engineers. . ." ,
       "comingSoon" : "Recently, I’ve stepped into the world of AI-powered software, Exployting my robust foundation language - python I mean - to build AI agents (into FastAPI server with LangChain/Graph) or even implement AI pre-built service (like row openAI API & Puter.js) into my apps,  This continuous expansion isn’t just about exploring backend intelligence, it’s a strategic move to amplify my frontend expertise. By understanding how AI systems work, I can craft smarter, context-aware user interfaces. It empowers me to collaborate fluidly with AI teams as a frontend specialist and gives me the leverage to lead and deliver AI-driven projects confidently as a freelancer. . . . ." ,
       "button" : "contact me",
       "expirence" : 1,
       "ProjectsCount" : 21
+    },
+    "mindset": {
+      "businessFirst": "I never treat software as just code. Beyond building a robust product, I prioritize the business foundation. Every project starts with a solid business plan, shaped after gathering full details from the client. This ensures the software isn’t just functional, but strategically positioned to achieve its market and business objectives.",
+
+      "performanceFirst": "Once the business direction is set, I switch focus to my technical arena. I dive into areas many overlook—system performance, scalability, and security. These are the backbone of long-lasting software. My engineering process balances business priorities with technical excellence, ensuring both stability and competitive advantage.",
+
+      "birdEye": "My freelance journey equipped me with a true bird’s-eye view of the full software lifecycle. I’ve navigated everything from system architecture to deployment pipelines, from DevOps automation to penetration testing, from UX research to AI integration. This shaped my ability to collaborate fluidly across domains—backend engineers, designers, DevOps teams, security experts, and AI specialists—while keeping alignment with the client’s goals.",
+
+      "specialization": "Although I operate as a full-stack freelancer, I’ve deliberately specialized in Frontend Engineering. For me, it’s not about coding interfaces—it’s about engineering immersive, high-performance, accessible user experiences. I leverage modern tools like React.js, Next.js, TypeScript, GSAP, and Framer Motion to craft experiences that are not only functional but emotionally engaging and future-proof."
     },
     "services": [
       { "title": "Javascript" },

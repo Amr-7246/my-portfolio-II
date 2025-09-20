@@ -16,6 +16,7 @@ import ProjectsCategories from "./ProjectsCategories.jsx";
 import CanvasLoader from "../Loader.jsx";
 import SaturnLoader from "../SaturnLoader.jsx";
 import Topper from '../Topper';
+import CateCard from "./CateCard.jsx";
 
 // ~ ########### Start Experience Card
   const ExperienceCard = ({ experience }) => {
@@ -45,7 +46,7 @@ import Topper from '../Topper';
               src={experience.icon}
               alt={experience.company_name}
               onClick={() => openWeb(experience.link)}
-              className="w-[60%] h-[60%] object-contain cursor-pointer  hover:scale-[1.2] transition-transform duration-300 hover:rotate-[20deg]"
+              className="w-[70%] object-contain cursor-pointer  hover:scale-[1.2] transition-transform duration-300 hover:rotate-[20deg]"
             />
           </div>
         }
@@ -123,14 +124,16 @@ const Experience = () => {
     <>
       <ProjectsCategories WhichCate={WhichCate} setWhichCate={setWhichCate} />
       { IsLoading ? <SaturnLoader/> : (
-      <div id='projects' className="mt-20 max-w-[500px] lg:max-w-[2000px] mx-auto flex flex-col gap-10">
-        <Topper text= { {left : 'My Work' , right : 'Develop Your Dream App Now'} } className={''} />
-        <VerticalTimeline>
-          {selectedCate.map((experience, index) => (
-            <ExperienceCard  key={`experience-${index}`} experience={experience} />
-          ))}
-        </VerticalTimeline>
-      </div>
+        <>
+          <div id='projects' className="mt-20 max-w-[500px] lg:max-w-[2000px] mx-auto flex flex-col gap-10">
+            <Topper text= { {left : 'My Work' , right : 'Develop Your Dream App Now'} } className={''} />
+            <VerticalTimeline>
+              {selectedCate.map((experience, index) => (
+                <ExperienceCard  key={`experience-${index}`} experience={experience} />
+              ))}
+            </VerticalTimeline>
+          </div>
+          </>
 
       )}
     </>

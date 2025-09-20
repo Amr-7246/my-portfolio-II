@@ -30,6 +30,12 @@ import vite from "../assets/Customize/vite.svg";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.png";
+import laravel from "./tech/laravel-1.svg";
+import fastAPI from "./tech/fastapi-1.svg";
+import expo from "./tech/expo.svg";
+import express from "./tech/express-js-80.png";
+import php from "./tech/php-6.svg";
+import reactNative from "./tech/react-native-1.svg";
 
 // Import common assets
 import logo from "./logo.svg";
@@ -94,6 +100,7 @@ import frontend from "./frontend.svg";
 import fullstack from "./fullstack.svg";
 import mern1 from "./mern-stack.svg";
 import mern2 from "./mern-stack-2.svg";
+import mern2_green from "./Developer activity-amico.svg";
 import programmer from "./programmer.svg";
 import projectManger from "./projectManger.svg";
 import systemDesign from "./system-design.svg";
@@ -111,12 +118,15 @@ export {
   whatsApp,
   gmail,
 // ********** infinity scrolling section
-  AIDeveloper, backend, freelancer, frontend, fullstack, mern1, mern2, programmer, projectManger, systemDesign, systemDesign2,
+  AIDeveloper, backend, freelancer, frontend, fullstack, mern1, mern2, mern2_green, programmer, projectManger, systemDesign, systemDesign2,
 // ********** infinity scrolling section
   // *********
   mathwork,
   edunet,
-  python, c, cpp, java, github, css, git, html, javascript, Typescript, Next,GSAP, nodejs, reactjs, tailwind, threejs,
+
+  python, c, cpp, java, github, css, git, html, javascript, Typescript, Next,GSAP, nodejs, reactjs,
+  tailwind, threejs,laravel,fastAPI,expo,php,express,reactNative,
+
   weatherpedia,
   termpw,
   payloadmaster,
